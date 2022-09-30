@@ -22,7 +22,7 @@ At the end of the project, the user needs to be able to do 3 times: <br>
 
 ## Documents
 
-[Functional Specifications](Documents/Functional.md) <br>
-[Technical Specifications](Documents/Technical.md) <br>
+[Functional Specifications](Documents/Functional-Specifications.md) <br>
+[Technical Specifications](Documents/Technical-Specifications.md) <br>
 [Software Architecture Design](Documents/SoftwareArchitecture.jpeg) <br>
-[Trello](https://trello.com/invite/b/J0aQL5A5/60d4e8318745b13c99a16d7972631cad/algosupproject5b)
+[Trello](https://trello.com/invite/b/B07Tt8rD/78289c46ec0aa3a92d3a52d16fa3fd65/group4)
