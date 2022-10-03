@@ -3,24 +3,23 @@
 <h2 style="text-decoration: underline">Table of contents:</h2>
 
 - [1. Introduction](#1-introduction)
-- [2. Definition of terms:](#2-definition-of-terms)
 - [3. Stakeholders:](#3-stakeholders)
   - [3.1. The sponsor:](#31-the-sponsor)
   - [3.2. The engineering team:](#32-the-engineering-team)
-- [4. The hardware:](#4-the-hardware)
-- [5. Monitoring of the signage](#5-monitoring-of-the-signage)
+- [4. Personaes](#4-personaes)
+  - [4.1 Manager:](#41-manager)
+  - [4.2 Technician:](#42-technician)
+- [5. Monitoring of the signage:](#5-monitoring-of-the-signage)
+- [6. Remote control of the signage:](#6-remote-control-of-the-signage)
+- [7. Consumption reduction and compliance with environmental laws:](#7-consumption-reduction-and-compliance-with-environmental-laws)
+- [8. The hardware:](#8-the-hardware)
   
 ---  
 
-## 1. Introduction
+## 1. Introduction 
 
 This project has been ordered by SignAll, a signage company in Vierzon. <br>
 They want to make their signage evolve to be able to check at the status of the panels, and control it remotely to make it easier, cheaper and more respectfull of the environment.
-
-## 2. Definition of terms:
-
-- dim: brightness, light intensity
-- 
 
 ## 3. Stakeholders:
 
@@ -41,14 +40,20 @@ The second stakeholders type is the engineering team who will directly work on t
 * Florent HUREAUX as the software engineer
 * Alexis LASSELIN as the quality insurance
 
+## 4. Personaes
 
-## 4. The hardware:
+### 4.1 Manager:
 
-The hardware that has been entrusted to us is a *LoRa-E5 dev board* that uses the LoRaWAN protocol.
-LoRaWAN protocol is a radio communication protocol, used in low energy networks.
-We were also given a *XY-MOS Power Mosfet Module* used to command the current given to the leds and a *current sensor ACS712* to percieve the current passing by the leds.
+Phillipe CHATRIER is the manager of the technical branch of AXA. He has to send a technician to make a weekly check on every store of the brand to be sure signages are working. <br>
+With the application he could be able to check every signages and turn them on/off by himself and he will receive a notification if the signage is anormaly off. 
+He will need less technicians and he will not pay for the trip each week for every shops so it will save a lot of money for the company.
 
-## 5. Monitoring of the signage
+### 4.2 Technician:
+
+Suzanne LENGLEN is a technician at SignAll and she is the one who works with AXA. Every monday she has to go to the Vierzon's AXA shop to check if the signage is well working. <br>
+Suzanne should be able to check at every moment the state of the signage (on/off, if it's anormaly off), she will reduce the frequency of the visits to the shop and will be able to replace the time lost with the signage to do other tasks.
+
+## 5. Monitoring of the signage:
 
 The monitoring of the signage is the main point of the development of this project. <br>
 
@@ -56,9 +61,24 @@ The user will use an application connected to the signage via antennas. He shoul
 
 This function will really be an informative one, it has the role of informing the user of the status of the signage in real time.
 
+## 6. Remote control of the signage:
 
+The remote control of the signage is the second parameter to consider during this project. <br>
 
-At the end of the project, the user needs to be able to do 3 things: <br>
-* The monitoring of the signage is probably the main point of this project. The user of the application needs to know how the signage is going on: if it is on/off, since when it is on/off, the heat of the signage to prevent over-heating, be warned in case of breakdown...
-* The remote control of the sign is the second parameter to consider in this project. The user has to be able to control the signage remotely, switching it on/off, change manually the dim of the signage.
-* The last option is related to the environmental laws and consumption reduction, the signage will automatically switch on/off at a defined hour and the intensity will change depending on the ambient lightning.
+The user will be able to manage the signage via an application. He should be able to switch the signage on or off and change its dim manually as he would do for a smartphone.
+
+This will be the interactive feature between the signage and the user.
+
+## 7. Consumption reduction and compliance with environmental laws:
+
+As we all now, nowadays global warming is in everyone's mind and a large number of constraints are imposed on companies to avoid the various pollutions. <br>
+In the case of signages it is light pollution and electricity consumption that are targeted by the different laws.
+
+To help SignAll in this field, we will add an intelligent feature to replace the human action. The signage will automatically turn on and off depending on the hour choose by the user (probably in function of environmental laws). <br>
+There will also be a feature to automatically adapt the dim of the signage depending on the ambient brightness
+
+## 8. The hardware:
+
+The hardware that has been entrusted to us is a *LoRa-E5 dev board* that uses the LoRaWAN protocol.
+LoRaWAN protocol is a radio communication protocol, used in low energy networks.
+We were also given a *XY-MOS Power Mosfet Module* used to command the current given to the leds and a *current sensor ACS712* to percieve the current passing by the leds.
