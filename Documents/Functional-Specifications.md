@@ -44,6 +44,9 @@ The second stakeholders type is the engineering team who will directly work on t
 
 ## 4. The hardware:
 
+The hardware that has been entrusted to us is a *LoRa-E5 dev board* that uses the LoRaWAN protocol.
+LoRaWAN protocol is a radio communication protocol, used in low energy networks.
+We were also given a *XY-MOS Power Mosfet Module* used to command the current given to the leds and a *current sensor ACS712* to percieve the current passing by the leds.
 
 ## 5. Monitoring of the signage
 
