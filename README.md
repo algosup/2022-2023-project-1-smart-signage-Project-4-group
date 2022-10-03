@@ -11,11 +11,11 @@
 
 ## Client
 
-The client of this project is SignALL, is a french company specialized in signs and signage for more than 50 years for international brands, the SignAll's field of action covers all the media that bring the company image to life: signs, flags, illuminated lettering, billboards, badges, boxes, banners, totems, interior signage, adhesives...
+The client of this project is [SignALL](https://signall.com "Website of SignALL"), is a french company specialized in signs and signage for more than 50 years for international brands, the SignAll's field of action covers all the media that bring the company image to life: signs, flags, illuminated lettering, billboards, badges, boxes, banners, totems, interior signage, adhesives...
 
 ## Goal of the project
 
-At the end of the project, the user needs to be able to do 3 times: <br>
+At the end of the project, the user needs to be able to do 3 things: <br>
 * The monitoring of the signage is probably the main point of this project. The user of the application needs to know how the signage is going on: if it is on/off, since when it is on/off, the heat of the signage to prevent over-heating, be warned in case of breakdown...
 * The remote control of the sign is the second parameter to consider in this project. The user has to be able to control the signage remotely, switching it on/off 
 * The last option is related to the environmental laws and consumption reduction, the signage will automatically switch on/off at a defined hour and the intensity will change depending on the ambient lightning.
