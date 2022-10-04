@@ -11,6 +11,8 @@
   - [2.2. What can't it do:](#22-what-cant-it-do)
 - [3. How will we develop it:](#3-how-will-we-develop-it)
   - [3.1. What will we use:](#31-what-will-we-use)
+    - [3.1.1. Arduino:](#311-arduino)
+    - [3.1.2. STM32CubeProgrammer:](#312-stm32cubeprogrammer)
   - [3.2. What will be modify:](#32-what-will-we-modify)
   - [3.3. What will be created:](#33-what-will-be-created)
 - [4. What for the rollout or if we need rollback:](#4-what-for-the-rollout-or-if-we-need-rollback)
@@ -25,7 +27,7 @@
 --- 
 ## 1. How does it have to work:
 
-
+This part is meant to explian how each part have to work in an ideal world where we have no problems. It's divided into three parts to allow the searches to be quicker.
 
 ### 1.1. Radio part:
 
@@ -54,19 +56,43 @@ Acording to what we are doing, the client won't be able to resolve the problem w
 
 ## 3. How will we develop it:
 
+From this part, you will know what the project is build with from the parts that are existing and that are used to the things that didn't exist and that was crzated passing throught the applications and IDEs used.
+
 ### 3.1. What will we use:
+
+Here is listed all the software, hardware, and IDE that are use or were used during the creation of the device.
+
+#### 3.1.1. Arduino: 
+
+Arduino is an open source hardware ( boards, modules ) and a software ( IDE: Integrated Development Environment ) company. They are well-known to build boards and microcontrollers. Arduino is one of the most used harware in the world ( with raspberry ) and the Arduino IDE is used a lot for injecting code in the Arduino's bords by people.
+
+#### 3.1.2. STM32CubeProgrammer:
+
+STM32CubeProgrammer is a tool created for programming in the STM products and that replaces STM32 ST-Link Utility.
 
 ### 3.2. What will we modify:
 
+(***To complete***)
+
 ### 3.3. What will be created:
+
+(***Put functions here***)
 
 ### 3.4. How will we secure it:
 
+(***To Complete***)
+
 ## 4. What for the rollout or if we need rollback:
+
+In this section, You will be explained how the rollout is planned and what would happen if we have to do a rollback during the conception of the product.
 
 ### 4.1 Rollout:
 
+(***To complete***)
+
 ### 4.2 Rollback:
+
+In case we need to do a rollback during the developement of the product, we would have to first select the time we need to set the rollback ( if one week ago is selected we will take the files in there states & week ago ), when we selcted the good moment, verify that we didn't created some files we don't want to be deleted ( and save them if that is the case ) and finaly we would use github to take the commits that were in place at the specified date.
 
 ## 5. How will we adapt it to our client:
 
