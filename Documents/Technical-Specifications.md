@@ -1,29 +1,32 @@
-<h1 style="text-align: center">Project 1 smart signage project 4 group - Technical Specifications</h1>
+<h1 style="text-align: center">Project 1 smart signage - group 4 - Technical Specifications</h1>
 
-<h2 style="text-decoration: underline">Table of contents:</h2>
+<details> 
+<summary style="text-decoration: underline; font-size:150%">Table of contents:</summary>
 
 - [1. How does it have to work:](#1-how-does-it-have-to-work)
-  - [1.1. Radio part:](#11-radio-part)
-  - [1.2. Coding part:](#12-coding-part)
-  - [1.3. Electronic part:](#13-electronic-part)
+	- [1.1. Radio part:](#11-radio-part)
+	- [1.2. Coding part:](#12-coding-part)
+	- [1.3. Electronic part:](#13-electronic-part)
 - [2. The possibilities:](#2-the-possibilities)
-  - [2.1. What can it do:](#21-what-can-it-do)
-  - [2.2. What can't it do:](#22-what-cant-it-do)
+	- [2.1. What can it do:](#21-what-can-it-do)
+	- [2.2. What can't it do:](#22-what-cant-it-do)
 - [3. How will we develop it:](#3-how-will-we-develop-it)
-  - [3.1. What will we use:](#31-what-will-we-use)
-    - [3.1.1. Arduino:](#311-arduino)
-    - [3.1.2. STM32CubeProgrammer:](#312-stm32cubeprogrammer)
-  - [3.2. What will be modify:](#32-what-will-we-modify)
-  - [3.3. What will be created:](#33-what-will-be-created)
+	- [3.1. What will we use:](#31-what-will-we-use)
+		- [3.1.1. Arduino:](#311-arduino)
+		- [3.1.2. STM32CubeProgrammer:](#312-stm32cubeprogrammer)
+	- [3.2. What will be modify:](#32-what-will-we-modify)
+	- [3.3. What will be created:](#33-what-will-be-created)
 - [4. What for the rollout or if we need rollback:](#4-what-for-the-rollout-or-if-we-need-rollback)
-  - [4.1. Rollout:](#41-rollout)
-  - [4.2. Rollback:](#42-rollback)
+	- [4.1. Rollout:](#41-rollout)
+	- [4.2. Rollback:](#42-rollback)
 - [5. How will we adapt it to our client:](#5-how-will-we-adapt-it-to-our-client)
 - [6. How will we provide support or maintenance:](#6-how-will-we-provide-support-or-maintenance)
-  - [6.1. Support:](#61-support)
-  - [6.2. Maintenance:](#62-maintenance)
+	- [6.1. Support:](#61-support)
+	- [6.2. Maintenance:](#62-maintenance)
 - [7. Project timeline:](#7-project-timeline)
-  
+
+</details>
+
 --- 
 ## 1. How does it have to work:
 
