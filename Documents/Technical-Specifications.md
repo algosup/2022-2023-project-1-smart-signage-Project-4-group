@@ -99,10 +99,18 @@ In case we need to do a rollback during the developement of the product, we woul
 
 ## 5. How will we adapt it to our client:
 
+From what our client want, the device has to scan the modules each thirty minutes to send to the customer the state of the device. Furthermore, if the customer wants to have a update of the device's state, he could click on a button on tha app and the device's clock would be reset to zero and sending an update.
+
 ## 6. How will we provide support or maintenance:
+
+This point is to explain how we would be able to help the client if he was in need of it.
 
 ### 6.1. Support:
 
+To be sure that the client have a support that is understandable and that can help him, we will do an explanatory note that will contain all the problems we are aware of and the way to solve them if the client can solve them, if not, we will provide our contact for the client to be able to contact us at any time. 
+
 ### 6.2. Maintenance:
+
+If there is any problem regarding the device during a defined period, we would have to first, try to solve it by sending messages or calling someone to explain him how to solve it, and in last resort, go see for ourselves and try to solve it, all the cost would be count in the maintenance cost rent.
 
 ## 7. Project timeline:
