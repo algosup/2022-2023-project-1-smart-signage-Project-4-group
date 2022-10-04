@@ -1,0 +1,73 @@
+<h1 style="text-align: center">Project 1 smart signage project 4 group - Technical Specifications</h1>
+
+<h2 style="text-decoration: underline">Table of contents:</h2>
+
+- [1. How does it have to work:](#1-how-does-it-have-to-work)
+  - [1.1. Radio part:](#11-radio-part)
+  - [1.2. Coding part:](#12-coding-part)
+  - [1.3. Electronic part:](#13-electronic-part)
+- [2. The possibilities:](#2-the-possibilities)
+  - [2.1. What can it do:](#21-what-can-it-do)
+  - [2.2. What can't it do:](#22-what-cant-it-do)
+- [3. How will we develop it:](#3-how-will-we-develop-it)
+  - [3.1. What will we use:](#31-what-will-we-use)
+  - [3.2. What will be modify:](#32-what-will-we-modify)
+  - [3.3. What will be created:](#33-what-will-be-created)
+- [4. What for the rollout or if we need rollback:](#4-what-for-the-rollout-or-if-we-need-rollback)
+  - [4.1. Rollout:](#41-rollout)
+  - [4.2. Rollback:](#42-rollback)
+- [5. How will we adapt it to our client:](#5-how-will-we-adapt-it-to-our-client)
+- [6. How will we provide support or maintenance:](#6-how-will-we-provide-support-or-maintenance)
+  - [6.1. Support:](#61-support)
+  - [6.2. Maintenance:](#62-maintenance)
+- [7. Project timeline:](#7-project-timeline)
+  
+--- 
+## 1. How does it have to work
+
+
+
+### 1.1. Radio part
+
+The project have to use a *LoRa-E5 dev board* to be connected ( with radio communication ) to a software ( ***Put a name here*** ).
+
+### 1.2. Coding part
+
+We need to use *Golang* to make a code that will sense when there is or there is not current passing throught the cables and send these informations using the *LoRa-E5 dev board* so that the client can see if it is functionning well or not.
+
+### 1.3. Electronic part
+
+The leds will be linked with the [*power supply*](https://glpower.eu/en/product/gpv-18/) with a [*power mosfet module*](https://www.robotics.org.za/XY-MOS) that allow us to control the energy passing by it from the power supply to the leds. We also have two current sensor, the first one will be put between the power supply and the leds to make sure the leds recieve energy, we will be using this [*current sensor*](https://www.elecrow.com/acs712-current-sensor-30a-p-710.html). As for the second one, we will put it on the cable between the outlet and the power supply, in order to determine if there is a problem if it comes from the leds, the power supply or just a power outage.
+<br>Furthermore, all the devices appart from the power supply and the leds will be connected to the board and there datas will be read to detect problems. 
+
+## 2. The possibilities
+
+### 2.1 What can it do
+
+### 2.2 What can't it do
+
+## 3. How will we develop it
+
+### 3.1. What will we use
+
+### 3.2. What will we modify
+
+### 3.3. What will be created
+
+### 3.4. How will we secure it
+
+## 4. What for the rollout or if we need rollback
+
+### 4.1 Rollout
+
+### 4.2 Rollback
+
+## 5. How will we adapt it to our client
+
+## 6. How will we provide support or maintenance
+
+### 6.1. Support
+
+### 6.2. Maintenance
+
+## 7. Project timeline
