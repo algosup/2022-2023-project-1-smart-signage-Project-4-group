@@ -24,6 +24,11 @@
 	- [6.1. Support:](#61-support)
 	- [6.2. Maintenance:](#62-maintenance)
 - [7. Project timeline:](#7-project-timeline)
+	- [7.1. Week 1](#71-week-1)
+	- [7.2. Week 2](#72-week-2)
+	- [7.3. Week 3](#73-week-3)
+	- [7.4. Week 4](#74-week-4)
+	- [7.5. Week 5](#75-week-5)
 
 </details>
 
@@ -83,7 +88,7 @@ STM32CubeProgrammer is a tool created for programming in the STM products and th
 
 ### 3.4. How will we secure it:
 
-(***To Complete***)
+There will be no reason to secure the software part of the device because the only informations that are passing by are the state of the leds and the requests sent by the customer.
 
 ## 4. What for the rollout or if we need rollback:
 
@@ -114,3 +119,21 @@ To be sure that the client have a support that is understandable and that can he
 If there is any problem regarding the device during a defined period, we would have to first, try to solve it by sending messages or calling someone to explain him how to solve it, and in last resort, go see for ourselves and try to solve it, all the cost would be count in the maintenance cost rent.
 
 ## 7. Project timeline:
+
+In the timeline, we will put every things that can be considered a millestone in it and add the date of it to have a complete agenda of what have been done all along the process.
+
+### 7.1. Week 1:
+
+<ins>27 september 2022:</ins> Setting the rules and explaining the project and the ideas of all the team.<br>
+<ins>30 september 2022:</ins> Starting of the Functional Specifications and first attempts to connect the hardware parts.
+
+### 7.2. Week 2:
+
+<ins>3 october 2022:</ins> Adding details to the Functional Specifications.<br>
+<ins>4 october 2022:</ins> End of the first version of the Functional Specifications, start of the Technical Specifications, trying to inject code into the board.
+
+### 7.3. Week 3:
+
+### 7.4. Week 4:
+
+### 7.5. Week 5:
