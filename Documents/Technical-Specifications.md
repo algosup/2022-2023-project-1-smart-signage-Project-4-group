@@ -42,15 +42,15 @@
 --- 
 # 1. How does it have to work:
 
-This part is meant to explian how each part have to work in an ideal world where we have no problems. It's divided into three parts to allow the searches to be quicker. This device is being created because the client wants to control the device and be able to change his state ( On or Off ) without sending someone so that it will also be a good thing for the ecology.
+This part is meant to explian how each part have to work in an ideal world where we have no problems. It's divided into three parts to allow the searches to be quicker. This device is being created because the client wants to control the device and be able to change his state ( On or Off ) without sending someone so that it will also be a good point for the ecology.
 
 ## 1.1. Radio part:
 
-The project have to use a *LoRa-E5 dev board* to be connected ( with radio communication ) to a software ( ***Put a name here*** ) Using LoRAWAN protocol.
+The project have to use a *LoRa-E5 dev board* to be connected ( with radio communication ) to a software ( ***Put a name here*** ) Using LoRAWAN protocol. We use the LoRaWAN protocol because we need to send and recieve informations even if the device is not placed in a place where there is an internet connection, so using radio transmition is to make sure that we will be able to send and recieve the informations we want.
 
 ## 1.2. Coding part:
 
-We need to use ***Golang*** to make a code that will sense when there is or there is not current passing throught the cables and send these informations using the *LoRa-E5 dev board* so that the client can see if it is functionning well or not. To inject the code on the board, we were requested to use ***Tiny GO***.
+We need to use ***Golang*** to make a code that will sense when there is or there is not current passing throught the cables and send these informations using the *LoRa-E5 dev board* so that the client can see if it is functionning well or not. To inject the code on the board, we were requested to use ***Tiny GO***. We have to write a code that will recieve the datas from all the module, treat the datas ( detect abnomalities ) and send them to the app, and that will also recieve from the app requests from the user to turn on or turn off the device.
 
 ## 1.3. Electronic part:
 
@@ -59,15 +59,18 @@ The leds will be linked with the power supply with a power mosfet module that al
 
 # 2. The possibilities:
 
-In this part, we will explain what the device will be able to do in the field we want and what it won't be able to do.
+In this part, we will explain what the device will be able to do in the field we want and what it won't be able to do. This part is used to make sure everyone understand what we have to do and what is out of the scop of the project.
 
 ## 2.1 What can it do:
 
-The device is based on the need of visibility of the problems, so by connecting to the app, the client will be able to see if the leds are still on or if there is a problem and they are off. Moreover, if there is a problem, the client will be able to se exactly where the problem is depending on where the problem is located. The client will also be able to turn on or turn off the leds from the app so that he doesn't need to send somemone on site just for that.
+The device is based on the need of visibility of the problems, so by connecting to the app, the client will be able to see if the leds are still on or if there is a problem and they are off.<br> 
+Moreover, if there is a problem, the client will be able to se exactly where the problem is depending on where the problem is located.<br>
+The client will also be able to turn on or turn off the leds from the app so that he doesn't need to send somemone on site just for that.<br> 
+By making the leds blink, we will be able to control the intensity of the light and so to reduce the luminosity and reduce the energy consuption.
 
 ## 2.2 What can't it do:
 
-Acording to what we are doing, the client won't be able to resolve the problem without sending a technician to see in person.
+Acording to what we are doing, the client won't be able to resolve the problem without sending a technician to see in person. Using the sensors, the device will be able to determine roughly where is the problem but won't be able to detect precisly where it is located.
 
 # 3. How will we develop it:
 
@@ -128,7 +131,7 @@ There will be no reason to secure the software part of the device because the on
 
 # 4. What for the rollout or if we need rollback:
 
-In this section, You will be explained how the rollout is planned and what would happen if we have to do a rollback during the conception of the product.
+In this section, You will be explained how the rollout is planned and what would happen if we had to do a rollback during the conception of the product.
 
 ## 4.1 Rollout:
 
@@ -161,13 +164,18 @@ In the timeline, we will put every things that can be considered a millestone in
 ## 7.1. Week 1:
 
 <ins>27 september 2022:</ins> Setting the rules and explaining the project and the ideas of all the team.<br>
-<ins>30 september 2022:</ins> Starting of the Functional Specifications and first attempts to connect the hardware parts.
+
+<ins>30 september 2022:</ins> Starting of the Functional Specifications and first attempts to connect the hardware parts.<br>
 
 ## 7.2. Week 2:
 
 <ins>3 october 2022:</ins> Adding details to the Functional Specifications.<br>
+
 <ins>4 october 2022:</ins> End of the first version of the Functional Specifications, start of the Technical Specifications, trying to inject code into the board.<br>
-<ins>5 october 2022:</ins> First release of the Software Architecture Design.
+
+<ins>5 october 2022:</ins> First release of the Software Architecture Design.<br>
+
+<ins>7 october 2022:</ins> As we finally got the good module to connect the LoRa-E5 to connect to the computer, we started working on the code to inject.<br>
 
 ## 7.3. Week 3:
 

@@ -24,5 +24,5 @@ At the end of the project, the user needs to be able to do 3 things: <br>
 
 [Functional Specifications](Documents/Functional-Specifications.md) <br>
 [Technical Specifications](Documents/Technical-Specifications.md) <br>
-[Software Architecture Design](Documents/SoftwareArchitecture.jpeg) <br>
+[Software Architecture Design](Documents/Software-Architecture-Design.png) <br>
 [Trello](https://trello.com/invite/b/B07Tt8rD/78289c46ec0aa3a92d3a52d16fa3fd65/group4)
