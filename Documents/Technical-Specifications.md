@@ -103,7 +103,7 @@ The leds ( Light Emitting Diode ) are used to brighten the sign and will be cont
 
 #### 3.1.1.5. StLink
 
-(***Put explainations here***)
+The STM32F103C8T6 ARM Development Board Microcomputer STM32 Core Board is a low cost STM32 microcontroller development board for learners. This board is a low-cost Minimum System Development Board for ARM Microcontroller STM32F103C8T6.
 
 #### 3.1.1.6. LoRa-E5 dev board
 
@@ -135,7 +135,7 @@ In this section, You will be explained how the rollout is planned and what would
 
 ## 4.1 Rollout:
 
-(***To complete***)
+For the rollout, we think the best way to do it is to start by testing the product in all the signs of one city and wait for some months and if there is any problem, solve it ( using continous integration ) and if there is no more problems, it can be released for other cities.
 
 ## 4.2 Rollback:
 
