@@ -10,6 +10,7 @@
 - [2. The possibilities:](#2-the-possibilities)
 	- [2.1. What can it do:](#21-what-can-it-do)
 	- [2.2. What can't it do:](#22-what-cant-it-do)
+	- [2.3. What could it do:](#23-what-could-it-do)
 - [3. How will we develop it:](#3-how-will-we-develop-it)
 	- [3.1. What will we use:](#31-what-will-we-use)
 		- [3.1.1. Electronic components:](#311-electronic-components)
@@ -59,18 +60,22 @@ The leds will be linked with the power supply with a power mosfet module that al
 
 # 2. The possibilities:
 
-In this part, we will explain what the device will be able to do in the field we want and what it won't be able to do. This part is used to make sure everyone understand what we have to do and what is out of the scop of the project.
+In this part, we will explain what the device will be able to do in the field we want and what it won't be able to do. This part is used to make sure everyone understand what we have to do and what is out of the scop of the project. We will also detailled some ideas that could be good if we have enough time for them or if others want to improve it later on.
 
-## 2.1 What can it do:
+## 2.1. What can it do:
 
 The device is based on the need of visibility of the problems, so by connecting to the app, the client will be able to see if the leds are still on or if there is a problem and they are off.<br> 
 Moreover, if there is a problem, the client will be able to se exactly where the problem is depending on where the problem is located.<br>
 The client will also be able to turn on or turn off the leds from the app so that he doesn't need to send somemone on site just for that.<br> 
 By making the leds blink, we will be able to control the intensity of the light and so to reduce the luminosity and reduce the energy consuption.
 
-## 2.2 What can't it do:
+## 2.2. What can't it do:
 
 Acording to what we are doing, the client won't be able to resolve the problem without sending a technician to see in person. Using the sensors, the device will be able to determine roughly where is the problem but won't be able to detect precisly where it is located.
+
+## 2.3. What could it do:
+
+If we imagine an independant system that could protect himself from turning off in case of a defective component. For that, we would need to have current sensors between each module to detect the exact deficient module and would open a new path in the electical system ( for those we could do without ).
 
 # 3. How will we develop it:
 
@@ -178,6 +183,10 @@ In the timeline, we will put every things that can be considered a millestone in
 <ins>7 october 2022:</ins> As we finally got the good module to connect the LoRa-E5 to connect to the computer, we started working on the code to inject.<br>
 
 ## 7.3. Week 3:
+
+<ins>10 october 2022:</ins> For the first day of that week, we were still trying to connect the St-Link and inject some code in it, but after some searches, we were able to determine that just needed soldering.
+
+<ins>11 october 2022:</ins> After soldering the St-Link, we were able to inject code in it and were searching for a hardware able to do what we wanted.
 
 ## 7.4. Week 4:
 
