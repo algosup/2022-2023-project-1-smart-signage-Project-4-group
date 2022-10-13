@@ -23,4 +23,22 @@ func TestGetCurrentSensorData(t *testing.T) {
 		})
 	}
 }
-func TestReduceLightIntensity(t *testing.T) {}
+func TestReduceLightIntensity(t *testing.T) {
+	cases := []struct {
+		name      string
+		intensity int
+		want      bool
+	}{
+		{"Change intensity to 50%", 50, true},
+		{"Change intensity to 20%", 20, true},
+	}
+
+	for _, c := range cases {
+		t.Run(c.name, func(t *testing.T) {
+			got := ReduceLightIntensity(c.intensity)
+			if got != c.want {
+				t.Fatalf("got %t, want %t", got, c.want)
+			}
+		})
+	}
+}
