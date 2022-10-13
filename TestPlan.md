@@ -57,28 +57,46 @@ When starting a project, one must imagine all possible eventualities in order to
 
 
 #### **III.1.d. Test logistics**
-a
+The tests started the 3 october, realised in a first part by Robin and Clément. 
 
 ### **III.2. Test objectives**
-b
+a
 
 ### **III.3. Test criteria**
-c
+b
 
 ## **IV. Ressource planning**
-d
+This project is carried out by a team of 5 people: <br>
+* Robin DEBRY as the project manager
+* Quentin CLEMENT as the program manager
+* Laurent BOUQUIN as the technical leader
+* Florent HUREAUX as the software engineer
+* Alexis LASSELIN as the quality insurance
+
+We describe here all the hardware we used during the test phase.<br>
+* A computer with TinyGo.
+* We are using is a [*power supply*](https://glpower.eu/en/product/gpv-18/) that will take a 200 to 240V as input and will output a 12V current. That is used to reduce the voltage that input into the components that would break if we input them with hundreds of Volts.
+
+* There is two types of current sensors that we were given. The first one is a [*Magnetic current sensor*](https://electropeak.com/learn/interfacing-zmct103c-5a-ac-current-transformer-module-with-arduino/) that will read the intensity of the input current using magnetism.<br>
+The second one is a [*current sensor*](https://www.elecrow.com/acs712-current-sensor-30a-p-710.html) that will measure the intensity of the current when it will pass throught the device.
+
+
+* The [*power mosfet module*](https://www.robotics.org.za/XY-MOS) is a device that will be controlled by the board and will depending on the code that is input in it, will allow current to pass from the power supply to the leds.
+* The leds ( Light Emitting Diode ) are used to brighten the sign and will be controled using power mosfet module.
+
+* The [*LoRa-E5 dev board*](https://www.mouser.fr/new/seeed-studio/seeed-lora-e5-development-kit/) is the microcontroller that we will use as the core of the device, in which we will inject the code and that will be connected to all the modules. It's connected by the [*Blue Pill STM32F103C8T6*](https://rees52.com/other-devlopment-boards/2581-stm32f103c8t6-arm-stm32-minimum-system-development-board-module-for-arduino-na266), this one is put on a Bread Board.
 
 ## **V. Plan test environment**
-e
+c
 
 ## **VI. Schedules and estimation**
 | **Task**                      | **Member** | **Estimate effort** |
 |-------------------------------|------------|---------------------|
-| Create the test specification | Alexis     | 5 days              |
-| Perform Test Execution        | Alexis     | 3 days              |
-| Test Report                   | Alexis     | 1 day               |
-| Test Delivery                 |            | 2 days              |
-| Total                         |            | 11 days             |
+| Create the test specification |            |                     |
+| Perform Test Execution        |            |                     |
+| Test Report                   |            |                     |
+| Test Delivery                 |            |                     |
+| Total                         |            |                     |
 
 ## **VII. Determine test deliverables**
-To be added once the test is done
+To add once the test is done
