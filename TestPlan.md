@@ -73,7 +73,7 @@ This project is carried out by a team of 5 people: <br>
 * Florent HUREAUX as the software engineer
 * Alexis LASSELIN as the quality insurance
 
-We describe here all the hardware we used during the test phase.<br>
+There is the hardware part than we used during the test phase.<br>
 * A computer with TinyGo.
 * We are using is a [*power supply*](https://glpower.eu/en/product/gpv-18/) that will take a 200 to 240V as input and will output a 12V current. That is used to reduce the voltage that input into the components that would break if we input them with hundreds of Volts.
 
@@ -90,13 +90,13 @@ The second one is a [*current sensor*](https://www.elecrow.com/acs712-current-se
 c
 
 ## **VI. Schedules and estimation**
-| **Task**                      | **Member** | **Estimate effort** |
-|-------------------------------|------------|---------------------|
-| Create the test specification |            |                     |
-| Perform Test Execution        |            |                     |
-| Test Report                   |            |                     |
-| Test Delivery                 |            |                     |
-| Total                         |            |                     |
+| **Task**                      | **Member(s)** | **Estimate effort** |
+|-------------------------------|---------------|---------------------|
+| Create the test specification |               |                     |
+| Perform Test Execution        |               |                     |
+| Test Report                   |               |                     |
+| Test Delivery                 |               |                     |
+| Total                         |               |                     |
 
 ## **VII. Determine test deliverables**
 To add once the test is done
