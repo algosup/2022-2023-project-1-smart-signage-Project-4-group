@@ -1,4 +1,4 @@
 package Prog
 
-func TurnOnModuleControl()  {}
-func TurnOffModuleControl() {}
+func GetCurrentSensorData(module int)  {}
+func ReduceLightIntensity(percent int) {}
