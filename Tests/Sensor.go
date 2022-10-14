@@ -12,7 +12,7 @@ func GetCurrentSensorData(module int) int {
 func ReadByPin(pin int) int {
 	var out int
 	if pin == 1 {
-		// put a machine.pin(module's pin
+		// put a machine.pin(module's pin)
 		out = 230
 	} else {
 		// put a machine.pin(module's pin)
@@ -22,9 +22,9 @@ func ReadByPin(pin int) int {
 }
 
 // Having intensity change by a percentage given in input
-func ReduceLightIntensity(intensity int) bool {
+func ChangeLightIntensity(intensity int) bool {
 	var time int
-	if intensity < 100 && intensity > 0{
+	if intensity < 100 && intensity > 0 {
 		time = 50 * (intensity / 100)
 		// put a machine.blink(time)
 		time += 0
