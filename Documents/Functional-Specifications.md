@@ -8,7 +8,6 @@
   - [2.2. The engineering team:](#22-the-engineering-team)
 - [3. Personas](#3-personas)
   - [3.1 Main targets:](#31-main-targets)
-  - [3.1 Secondary targets:](#31-secondary-targets)
 - [4. Monitoring of the signage:](#4-monitoring-of-the-signage)
 - [5. Remote control of the signage:](#5-remote-control-of-the-signage)
 - [6. Consumption reduction and compliance with environmental laws:](#6-consumption-reduction-and-compliance-with-environmental-laws)
@@ -59,18 +58,11 @@ The signage will automatically turn on/off at the time chosen by Philippe and wi
 Suzanne LENGLEN is a technician at SignAll and she is the one who works with AXA. Every monday she has to go to the Vierzon's AXA shop to check if the signage is well working. <br>
 Suzanne should be able to check at every moment the state of the signage (on/off, if it's anormaly off), she will reduce the frequency of the visits to the shop and will be able to replace the time lost with the signage to do other tasks. She only comes to the store when Philippe asks her to come when the signage needs to be repaired.
 
-### 3.1 Secondary targets:
-
-<p style="text-decoration:underline">The potential future client:</p>
-
-Arthur ASHE is the manager of MAAF Vierzon, his shop is in direct competition with AXA Vierzon and he knows that the signage in front of his shop is a really important aspect in marketing. <br>
-If the sign breaks down, it will have a consequent impact on the clientele. He wants to be notified directly when his signage has a problem. That's why when he heard that AXA had a smart sign, he immediately thought about the fact to get one for his own store. Even if the other functionalities of the product are not the main reason why he wants to have it, he is still interested in the remote control functionalities of the signage.
-
 ## 4. Monitoring of the signage:
 
 The monitoring of the signage is the main point of the development of this project. <br>
 
-The user will use an application connected to the signage via antennas. He should be able to see if the signage is on, if it is off, since when it is on/off, the dim of the panel, the heat of the signage to prevent from over-heating, and if it is off abnormally warn the user there could be a breakdown.
+The user will use an application (need to check with SignAll if there is already an existing one;) connected to the signage via antennas. He should be able to see if the signage is on, if it is off, since when it is on/off, the dim of the panel, the heat of the signage to prevent from over-heating, and if it is off abnormally warn the user there could be a breakdown.
 
 This function will really be an informative one, it has the role of informing the user of the status of the signage in real time.
 
