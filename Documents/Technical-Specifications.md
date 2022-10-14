@@ -25,7 +25,7 @@
 	- [3.2. What will be modify:](#32-what-will-we-modify)
 	- [3.3. What will be created (functions):](#33-what-will-be-created-functions)
 		- [3.3.1. GetCurrentSensorData](#331-getcurrentsensordata)
-		- [3.3.2. ReduceLightIntensity](#332-reducelightintensity)
+		- [3.3.2. ChangeLightIntensity](#332-changelightintensity)
 		- [3.3.3. SendDataByLoRa](#333-senddatabylora)
 		- [3.3.4. GetReceivedDataByLoRa](#334-getreceiveddatabylora)
 		- [3.3.5. TurnOnModuleControl](#335-turnonmodulecontrol)
@@ -138,9 +138,9 @@ Here is listed all the software, hardware, and IDE that we will modify or that w
 
 the GetCurrentSensorData function return the current voltage of the current sensor and can be used by any of the two current sensors that we have, depending on the input that is used when calling the function.
 
-### 3.3.2. ReduceLightIntensity:
+### 3.3.2. ChangeLightIntensity:
 
-The ReduceLightIntensity function will be used to reduce the intensity of the light emitted by the leds. It will be used to reduce the energy consuption and to make the leds blink. It will need to use the TurnOnModuleControl and the TurnOffModuleControl functions.
+The ChangeLightIntensity function will be used to change the intensity of the light emitted by the leds. It will be used to reduce the energy consuption and to make the leds blink. It will need to use the TurnOnModuleControl and the TurnOffModuleControl functions.
 
 ### 3.3.3. SendDataByLoRa:
 
