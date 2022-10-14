@@ -23,7 +23,13 @@
 		- [3.1.2. Arduino:](#312-arduino)
 		- [3.1.3. STM32CubeProgrammer:](#313-stm32cubeprogrammer)
 	- [3.2. What will be modify:](#32-what-will-we-modify)
-	- [3.3. What will be created:](#33-what-will-be-created)
+	- [3.3. What will be created (functions):](#33-what-will-be-created-functions)
+		- [3.3.1. GetCurrentSensorData](#331-getcurrentsensordata)
+		- [3.3.2. ReduceLightIntensity](#332-reducelightintensity)
+		- [3.3.3. SendDataByLoRa](#333-senddatabylora)
+		- [3.3.4. GetReceivedDataByLoRa](#334-getreceiveddatabylora)
+		- [3.3.5. TurnOnModuleControl](#335-turnonmodulecontrol)
+		- [3.3.6. TurnOffModuleControl](#336-turnoffmodulecontrol)
 - [4. What for the rollout or if we need rollback:](#4-what-for-the-rollout-or-if-we-need-rollback)
 	- [4.1. Rollout:](#41-rollout)
 	- [4.2. Rollback:](#42-rollback)
@@ -83,7 +89,7 @@ From this part, you will know what the project is build with from the parts that
 
 ## 3.1. What will we use:
 
-Here is listed all the software, hardware, and IDE that are use or were used during the creation of the device.
+Here is listed all the software, hardware, and IDE that are use or were used during the creation of the device. We will also explain what each of them are used for.
 
 ### 3.1.1. Electronic components:
 
@@ -91,7 +97,7 @@ Here is decribed all the elctronic components we used during the conception.
 
 #### 3.1.1.1. Power supply:
 
-The power supply we are using is a [*power supply*](https://glpower.eu/en/product/gpv-18/) that will take a 200 to 240V as input and will output a 12V current. That is used to reduce the voltage that input into the components that would break if we input them with hundreds of Volts.
+The power supply we are using is a [*power supply*](https://glpower.eu/en/product/gpv-18/) that will take a 200 to 240V as input and will output a 12V current. That is used to reduce the voltage that input into the components that would break if we input them with hundreds of Volts. We are using a 12V current because it is the one that is used by the leds.
 
 #### 3.1.1.2. Current sensors
 
@@ -100,7 +106,7 @@ The second one is a [*current sensor*](https://www.elecrow.com/acs712-current-se
 
 #### 3.1.1.3. Power mosfet module
 
-The [*power mosfet module*](https://www.robotics.org.za/XY-MOS) is a device that will be controlled by the board and will depending on the code that is input in it, will allow current to pass from the power supply to the leds.
+The [*power mosfet module*](https://www.robotics.org.za/XY-MOS) is a device that will be controlled by the board and will depending on the code that is input in it, will allow current to pass from the power supply to the leds. It will be used to control the intensity of the light and to turn on or turn off the leds.
 
 #### 3.1.1.4. Leds
 
@@ -112,7 +118,7 @@ The STM32F103C8T6 ARM Development Board Microcomputer STM32 Core Board is a low 
 
 #### 3.1.1.6. LoRa-E5 dev board
 
-The [LoRa-E5 dev board](https://www.mouser.fr/new/seeed-studio/seeed-lora-e5-development-kit/) is the microcontroller that we will use as the core of the device, in which we will inject the code and that will be connected to all the modules.
+The [LoRa-E5 dev board](https://www.mouser.fr/new/seeed-studio/seeed-lora-e5-development-kit/) is the microcontroller that we will use as the core of the device, in which we will inject the code and that will be connected to all the modules. It is a LoRaWAN module that will allow us to send and recieve data using radio communication.
 
 ### 3.1.2. Arduino: 
 
@@ -120,15 +126,37 @@ Arduino is an open source hardware ( boards, modules ) and a software ( IDE: Int
 
 ### 3.1.3. STM32CubeProgrammer:
 
-STM32CubeProgrammer is a tool created for programming in the STM products and that replaces STM32 ST-Link Utility.
+STM32CubeProgrammer is a tool created for programming in the STM products and that replaces STM32 ST-Link Utility. It is used to inject code in the STM32F103C8T6 ARM Development Board Microcomputer STM32 Core Board.
 
 ## 3.2. What will we modify:
 
-(***To complete***)
+Here is listed all the software, hardware, and IDE that we will modify or that we modified during the conception.
 
-## 3.3. What will be created:
+## 3.3. What will be created (functions):
 
-(***Put functions here***)
+### 3.3.1. GetCurrentSensorData:
+
+the GetCurrentSensorData function return the current voltage of the current sensor and can be used by any of the two current sensors that we have, depending on the input that is used when calling the function.
+
+### 3.3.2. ReduceLightIntensity:
+
+The ReduceLightIntensity function will be used to reduce the intensity of the light emitted by the leds. It will be used to reduce the energy consuption and to make the leds blink. It will need to use the TurnOnModuleControl and the TurnOffModuleControl functions.
+
+### 3.3.3. SendDataByLoRa:
+
+The SendDataByLoRa function will be used to send the data that we want to send to the app. It will be used to send the data of the current sensors and the data of the power mosfet module. We will also use it to send the data of the leds.
+
+### 3.3.4. GetReceivedDataByLoRa:
+
+The GetReceivedDataByLoRa function will be used to read the data that we want to get from the app. It will be used to read the requests of the client.
+
+### 3.3.5. TurnOnModuleControl:
+
+The TurnOnModuleControl function will be used to turn on the power mosfet module. It will be used to turn on the leds.
+
+### 3.3.6. TurnOffModuleControl:
+
+The TurnOffModuleControl function will be used to turn off the power mosfet module. It will be used to turn off the leds.
 
 ## 3.4. How will we secure it:
 
@@ -140,7 +168,7 @@ In this section, You will be explained how the rollout is planned and what would
 
 ## 4.1 Rollout:
 
-For the rollout, we think the best way to do it is to start by testing the product in all the signs of one city and wait for some months and if there is any problem, solve it ( using continous integration ) and if there is no more problems, it can be released for other cities.
+For the rollout, we think the best way to do it is to start by testing the product in all the signs of one city and wait for some months and if there is any problem, solve it ( using continous integration ) and if there is no more problems, it can be released for other cities. The rollout will be done in a way that the client will be able to use the product without any problem.
 
 ## 4.2 Rollback:
 
@@ -187,6 +215,8 @@ In the timeline, we will put every things that can be considered a millestone in
 <ins>10 october 2022:</ins> For the first day of that week, we were still trying to connect the St-Link and inject some code in it, but after some searches, we were able to determine that just needed soldering.
 
 <ins>11 october 2022:</ins> After soldering the St-Link, we were able to inject code in it and were searching for a hardware able to do what we wanted.
+
+<ins>14 october 2022:</ins> After being able to inject code in the board, we were able to start working on the code to inject.
 
 ## 7.4. Week 4:
 
