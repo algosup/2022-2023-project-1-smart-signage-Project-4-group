@@ -20,6 +20,8 @@
 			- [3.1.1.4. Leds:](#3114-leds)
 			- [3.1.1.5. StLink:](#3115-stlink)
 			- [3.1.1.6. LoRa-E5 dev board:](#3116-lora-e5-dev-board)
+			- [3.1.1.7. USB to UART module:](#3117-usb-to-uart-module)
+			- [3.1.1.8. Light sensor:](#3118-light-sensor)
 		- [3.1.2. Arduino:](#312-arduino)
 		- [3.1.3. STM32CubeProgrammer:](#313-stm32cubeprogrammer)
 	- [3.2. What will be modify:](#32-what-will-we-modify)
@@ -119,6 +121,14 @@ The STM32F103C8T6 ARM Development Board Microcomputer STM32 Core Board is a low 
 #### 3.1.1.6. LoRa-E5 dev board
 
 The [LoRa-E5 dev board](https://www.mouser.fr/new/seeed-studio/seeed-lora-e5-development-kit/) is the microcontroller that we will use as the core of the device, in which we will inject the code and that will be connected to all the modules. It is a LoRaWAN module that will allow us to send and recieve data using radio communication.
+
+#### 3.1.1.7. USB to UART module:
+
+The [*USB to UART module*](https://www.makerfabs.com/usb-uart-convertor-cp2102.html) is a device that will allow us to connect the board to the computer and to send code to it. It will be used to inject the code on the board.
+
+#### 3.1.1.8. Light sensor:
+
+The light sensor is a device that will allow us to measure the intensity of the light. It will be used to determine if the light is enough or not and to send the information to the card to adjust the intensity of the leds.
 
 ### 3.1.2. Arduino: 
 
