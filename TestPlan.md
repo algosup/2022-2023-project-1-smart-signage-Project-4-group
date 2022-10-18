@@ -98,14 +98,21 @@ The second one is a [*current sensor*](https://www.elecrow.com/acs712-current-se
 ## **V. Plan test environment**
 A testing environment is a setup of software and hardware on which the testing team is going to execute test cases. The test environment consists of real business and user environment, as well as physical environments, such as server, front end running environment.
 
+Our test environment is composed of:
+- A computer with TinyGo;
+- The LoRa-E5 dev board;
+- The Blue Pill STM32F103C8T6;
+- Some leds;
+- And the sensors.
+
 ## **VI. Schedules and estimation**
-| **Task**                      | **Member(s)** | **Estimate effort** |
-|-------------------------------|---------------|---------------------|
-| Create the test specification |               |                     |
-| Perform Test Execution        |               |                     |
-| Test Report                   |               |                     |
-| Test Delivery                 |               |                     |
-| Total                         |               |                     |
+| **Task**                      | **Member(s)**  | **Estimate effort** |
+|-------------------------------|----------------|---------------------|
+| Create the test specification |Florent/ Laurent|       3 days        |
+| Perform Test Execution        |Florent/ Laurent|       1 day         |
+| Test Report                   |     Alexis     |     1 half-day      |
+| Test Delivery                 |                |       1 day         |
+| Total                         |                |   5 days and half   |
 
 ## **VII. Determine test deliverables**
 To add once the test is done
