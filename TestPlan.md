@@ -96,7 +96,7 @@ The second one is a [*current sensor*](https://www.elecrow.com/acs712-current-se
 * The [*LoRa-E5 dev board*](https://www.mouser.fr/new/seeed-studio/seeed-lora-e5-development-kit/) is the microcontroller that we will use as the core of the device, in which we will inject the code and that will be connected to all the modules. It's connected by the [*Blue Pill STM32F103C8T6*](https://rees52.com/other-devlopment-boards/2581-stm32f103c8t6-arm-stm32-minimum-system-development-board-module-for-arduino-na266), this one is put on a Bread Board.
 
 ## **V. Plan test environment**
-c
+A testing environment is a setup of software and hardware on which the testing team is going to execute test cases. The test environment consists of real business and user environment, as well as physical environments, such as server, front end running environment.
 
 ## **VI. Schedules and estimation**
 | **Task**                      | **Member(s)** | **Estimate effort** |
