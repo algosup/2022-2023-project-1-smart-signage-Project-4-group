@@ -25,12 +25,12 @@ func TestGetCurrentSensorData(t *testing.T) {
 }
 func TestReduceLightIntensity(t *testing.T) {
 	cases := []struct {
-		name      string
-		intensity int
-		want      bool
+		name     string
+		isreduce int
+		want     bool
 	}{
-		{"Change intensity to 50%", 50, true},
-		{"Change intensity to 20%", 20, true},
+		{"Change intensity to 50%", true, true,
+		{"Change intensity to 20%", false, true},
 	}
 
 	for _, c := range cases {
