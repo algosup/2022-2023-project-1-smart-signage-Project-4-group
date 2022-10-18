@@ -60,10 +60,19 @@ When starting a project, one must imagine all possible eventualities in order to
 The tests started the 3 october, realised in a first part by Robin and Clément. 
 
 ### **III.2. Test objectives**
-a
+Test Objective is the overall goal and achievement of the test execution. The objective of the testing is finding as many software defects as possible; ensure that the software under test is bug free before release.
+
+![image](https://cdn.discordapp.com/attachments/450761035016699906/1031832888460709948/unknown.png)
 
 ### **III.3. Test criteria**
-b
+**Suspension Criteria** <br>
+Specify the critical suspension criteria for a test. If the suspension criteria are met during testing, the active test cycle will be suspended until the criteria are resolved.
+
+We have defined the criteria for suspension as:
+- No reaction of the leds;
+- No data received or sent
+
+![image](https://cdn.discordapp.com/attachments/450761035016699906/1031835191452373103/Untitled.png)
 
 ## **IV. Ressource planning**
 This project is carried out by a team of 5 people: <br>
