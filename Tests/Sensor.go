@@ -1,5 +1,10 @@
 package Prog
 
+import (
+	"machine"
+	"time"
+)
+
 func GetCurrentSensorData(module int) int {
 	var out int
 	if module == 1 {
@@ -21,15 +26,18 @@ func ReadByPin(pin int) int {
 	return out
 }
 
-// Having intensity change by a percentage given in input
-func ChangeLightIntensity(intensity int) bool {
-	var time int
-	if intensity < 100 && intensity > 0 {
-		time = 50 * (intensity / 100)
-		// put a machine.blink(time)
-		time += 0
-		return true
+func Light(isReduce bool) {
+	rate := time.Second / 100000000
+	leds := machine.PC13
+	leds.Configure(machine.PinConfig{Mode: machine.PinOutput})
+	if isReduce {
+		for {
+			leds.High()
+			time.Sleep(rate)
+			leds.Low()
+			time.Sleep(rate)
+		}
 	} else {
-		return false
+		leds.High()
 	}
 }

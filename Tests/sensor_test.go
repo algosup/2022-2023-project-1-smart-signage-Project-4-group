@@ -35,7 +35,7 @@ func TestReduceLightIntensity(t *testing.T) {
 
 	for _, c := range cases {
 		t.Run(c.name, func(t *testing.T) {
-			got := ChangeLightIntensity(c.intensity)
+			got := Light(c.isreduce)
 			if got != c.want {
 				t.Fatalf("got %t, want %t", got, c.want)
 			}
