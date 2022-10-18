@@ -12,8 +12,8 @@
 - [6. Consumption reduction and compliance with environmental laws:](#6-consumption-reduction-and-compliance-with-environmental-laws)
 - [7. Personas:](#7-personas)
   - [7.1 Store manager:](#71-store-manager)
-- [7.2 Technician:](#72-technician)
-- [7.3 CEO of SignAll:](#73-ceo-of-signall)
+  - [7.2 Technician:](#72-technician)
+  - [7.3 CEO of SignAll:](#73-ceo-of-signall)
   - [7.4 Roles on the application:](#74-roles-on-the-application)
 - [8. The technology:](#8-the-technology)
 - [9. Conclusion:](#9-conclusion)
@@ -92,14 +92,14 @@ He has to send a technician to make an annual check to be sure the signage is wo
 On his days off, he can turn the panel on/off from home whenever he wants or schedule a time to turn the panel on/off automatically. He will be able to dim the LED's by himself if he thinks it is necessary. <br>
 With these improvements, he will save money because the frequency of interventions will be lower, as will the electricity consumption, and it will save time by focusing on things other than signage.
 
-## 7.2 Technician:
+### 7.2 Technician:
 
 Suzanne LENGLEN is a technician at SignAll since 2019. She is 32 years old, married and has 2 children, and lives in Méreau with them. She loves food and spending time with her friends. <br>
 Her job is to install and repair the signages in all the shops of the region. She also has to make control of the signages one time a year in every shops to know if it needs a reparation. <br>
 Suzanne will have the role "Technicien", she will be able to check at every moment the state of the signages (on/off, if it's anormaly off). She has to go to AXA Vierzon every december to verify if everything is ok. With Appsolu, she will be able to avoid this annual intervention and she will only intervene if she sees that the signage has a problem and it needs to be repaired. If she needs to use the remote control features to make tests she will ask via the application the authorization to Phillipe Chatrier. <br> 
 It will reduce the frequency of her visits to the shop and will be able to replace the time lost with the signage to do other tasks.
 
-## 7.3 CEO of SignAll:
+### 7.3 CEO of SignAll:
 
 Bertrand MEURIOT is the CEO of SignAll. He is 41 years old, married and has 3 children. His hobbies are running and dogs.
 <br>
