@@ -62,7 +62,10 @@ The second stakeholders type is the engineering team who will directly work on t
 
 The monitoring of the signage is the main point of the development of this project. <br>
 
-The user will use an application (need to check with SignAll if there is already an existing one) connected to the signage via antennas. He should be able to see if the signage is on, if it is off. The customer will add to the application as many signages as he wants and the state (on/off) of the sign will be writen directly under the name of the signage. If a LED is broken, it will also be written under the state of the signage. When he clicks on the signage he wants, there will have a dedicate page for this sign. On it there will have the name, the state of the sign, if something isn't working, the actual brightness and temperature of the signage, since when it is on/off.
+The user will use an application connected to the signage via antennas. 
+He should be able to see if the signage is on, if it is off, the actual brightness of the sign and and the time since the sign is on. <br>
+To fight against breakdowns, the temperature of the LED's will be return, the signage will automatically be shut down at 70°C and the user will be able to know the temperature of the LED's whenever he wants. <br>
+If a led is broken, the leds that are on the same circuit will not work anymore (because the leds are connected in series). If it is the leds placed in the letters of a sign and one of the leds is broken, the letter will be totally extinguished. It is therefore important to all the sign if a led is broken.
 
 This function will really be an informative one, it has the role of informing the user of the status of the signage in real time.
 
@@ -70,17 +73,19 @@ This function will really be an informative one, it has the role of informing th
 
 The remote control of the signage is the second parameter to consider during this project. <br>
 
-The user will be able to manage the signage via an application. He should be able to switch the signage on or off and dim manually as he would do for a smartphone.
+The user will be able to manage the signage via an application. The user must be able to choose either to switch on the signage or to switch it off by clicking on a button on the application. He will also be able to change the brightness of the LED's just be adjusting a cursor as you would do with your phone. <br>
+The user will also be able to configure an automatic on/off time that he will be able to change at anytime.
 
-This will be the interactive feature between the signage and the user.
+This will be the interactive features between the signage and the user.
 
 ## 6. Consumption reduction and compliance with environmental laws:
 
 As we all now, nowadays global warming is in everyone's mind and a large number of constraints are imposed on companies to avoid the various pollutions. <br>
 In the case of signages it is light pollution and electricity consumption that are targeted by the different laws.
 
-To help SignAll in this field, we will add an intelligent feature to replace the human action. The signage will automatically turn on and off depending on the hour choose by the user (probably in function of environmental laws). <br>
-There will also be a feature to automatically adapt the brightness of the signage depending on the ambient brightness
+To help SignAll in this field, we will add an intelligent feature to replace the human action. The signage wasn't turned off during the night, it will be automatically turned off at 1am and on again at 6am (french law of the 10/07/2022). <br>
+If the user needs to turn it on during this period, he can do so anyway.
+Depending on the 
 
 ## 7. Personas:
 
@@ -96,7 +101,7 @@ With these improvements, he will save money because the frequency of interventio
 
 Suzanne LENGLEN is a technician at SignAll since 2019. She is 32 years old, married and has 2 children, and lives in Méreau with them. She loves food and spending time with her friends. <br>
 Her job is to install and repair the signages in all the shops of the region. She also has to make control of the signages one time a year in every shops to know if it needs a reparation. <br>
-Suzanne will have the role "Technicien", she will be able to check at every moment the state of the signages (on/off, if it's anormaly off). She has to go to AXA Vierzon every december to verify if everything is ok. With Appsolu, she will be able to avoid this annual intervention and she will only intervene if she sees that the signage has a problem and it needs to be repaired. If she needs to use the remote control features to make tests she will ask via the application the authorization to Phillipe Chatrier. <br> 
+Suzanne will have the role "Technicien", she will be able to check at every moment the status of the signages (on/off, if it's anormaly off). She has to go to AXA Vierzon every december to verify if everything is ok. With Appsolu, she will be able to avoid this annual intervention and she will only intervene if she sees that the signage has a problem and it needs to be repaired. If she needs to use the remote control features to make tests she will ask via the application the authorization to Phillipe Chatrier. <br> 
 It will reduce the frequency of her visits to the shop and will be able to replace the time lost with the signage to do other tasks.
 
 ### 7.3 CEO of SignAll:
