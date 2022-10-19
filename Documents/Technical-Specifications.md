@@ -8,17 +8,17 @@
 	- [1.2. Coding part:](#12-coding-part)
 	- [1.3. Electronic part:](#13-electronic-part)
 - [2. The possibilities:](#2-the-possibilities)
-	- [2.1. What can it do:](#21-what-can-it-do)
-	- [2.2. What can't it do:](#22-what-cant-it-do)
-	- [2.3. What could it do:](#23-what-could-it-do)
-- [3. How will we develop it:](#3-how-will-we-develop-it)
+	- [2.1. What can the device do:](#21-what-can-the-device-do)
+	- [2.2. What can't the device do:](#22-what-can't-the-device-do)
+	- [2.3. What could the device do:](#23-what-could-the-device-do)
+- [3. How will we develop the device:](#3-how-will-we-develop-the-device)
 	- [3.1. What will we use:](#31-what-will-we-use)
 		- [3.1.1. Electronic components:](#311-electronic-components)
 			- [3.1.1.1. Power supply:](#3111-power-supply)
 			- [3.1.1.2. Current sensors:](#3112-current-sensors)
 			- [3.1.1.3. Power mosfet module:](#3113-power-mosfet-module)
 			- [3.1.1.4. Leds:](#3114-leds)
-			- [3.1.1.5. StLink:](#3115-stlink)
+			- [3.1.1.5. Stm32 blue pill:](#3115-stm32-blue-pill)
 			- [3.1.1.6. LoRa-E5 dev board:](#3116-lora-e5-dev-board)
 			- [3.1.1.7. USB to UART module:](#3117-usb-to-uart-module)
 			- [3.1.1.8. Light sensor:](#3118-light-sensor)
@@ -51,15 +51,15 @@
 --- 
 # 1. How does it have to work:
 
-This part is meant to explian how each part have to work in an ideal world where we have no problems. It's divided into three parts to allow the searches to be quicker. This device is being created because the client wants to control the device and be able to change his state ( On or Off ) without sending someone so that it will also be a good point for the ecology.
+This part is meant to explian how each part have to work in an ideal world where we have no problems. It's divided into three parts to allow the searches to be quicker. This device is being created because the client wants to control the device and be able to change his state ( On or Off ) without sending someone so that it will also be a good point for the ecology. The client wants to have a device that will turn off automatically as long as the leds are too hot.
 
 ## 1.1. Radio part:
 
-The project have to use a *LoRa-E5 dev board* to be connected ( with radio communication ) to a software ( ***Put a name here*** ) Using LoRAWAN protocol. We use the LoRaWAN protocol because we need to send and recieve informations even if the device is not placed in a place where there is an internet connection, so using radio transmition is to make sure that we will be able to send and recieve the informations we want.
+The project have to use a *LoRa-E5 dev board* to be connected ( with radio communication ) to a software ([The Things Network](https://thethingsnetwork.org)) Using LoRAWAN protocol. We use the LoRaWAN protocol because we need to send and recieve informations even if the device is not placed in a place where there is an internet connection, so using radio transmition is to make sure that we will be able to send and recieve the informations we want.
 
 ## 1.2. Coding part:
 
-We need to use ***Golang*** to make a code that will sense when there is or there is not current passing throught the cables and send these informations using the *LoRa-E5 dev board* so that the client can see if it is functionning well or not. To inject the code on the board, we were requested to use ***Tiny GO***. We have to write a code that will recieve the datas from all the module, treat the datas ( detect abnomalities ) and send them to the app, and that will also recieve from the app requests from the user to turn on or turn off the device.
+We need to use [Golang](https://go.dev/) to make a code that will sense when there is or there is not current passing throught the cables and send these informations using the *LoRa-E5 dev board* so that the client can see if it is functionning well or not. To inject the code on the board, we were requested to use [Tiny GO](https://tinygo.org/). We have to write a code that will recieve the datas from all the module, treat the datas ( detect abnomalities ) and send them to the app, and that will also recieve from the app requests from the user to turn on or turn off the device.
 
 ## 1.3. Electronic part:
 
@@ -70,22 +70,28 @@ The leds will be linked with the power supply with a power mosfet module that al
 
 In this part, we will explain what the device will be able to do in the field we want and what it won't be able to do. This part is used to make sure everyone understand what we have to do and what is out of the scop of the project. We will also detailled some ideas that could be good if we have enough time for them or if others want to improve it later on.
 
-## 2.1. What can it do:
+## 2.1. What can the device do:
 
 The device is based on the need of visibility of the problems, so by connecting to the app, the client will be able to see if the leds are still on or if there is a problem and they are off.<br> 
-Moreover, if there is a problem, the client will be able to se exactly where the problem is depending on where the problem is located.<br>
+Moreover, if there is a problem, the client will be able to see exactly where the problem is depending on where the problem is located.<br>
 The client will also be able to turn on or turn off the leds from the app so that he doesn't need to send somemone on site just for that.<br> 
-By making the leds blink, we will be able to control the intensity of the light and so to reduce the luminosity and reduce the energy consuption.
+By making the leds blink, we will be able to control the intensity of the light and so to reduce the luminosity and reduce the energy consuption.<br> The device will automatically turn off at one in the morning and turn on at six in the morning, because of the european laws. However, the client will be able to turn it on or off during that time because according to the laws, the lights can be turned off one hour after you finished working (even if it is late in the night) and turned on one hour before the start of the activity.<br>
+The device is able to change the intensity of the leds using a photosensor. <br>
+The problems the device can detect are: 
+ - a misfunctionning in the sensors
+ - a power outage
+ - a problem with the power supply
+ - an overheat of the leds
 
-## 2.2. What can't it do:
+## 2.2. What can't the device do:
 
-Acording to what we are doing, the client won't be able to resolve the problem without sending a technician to see in person. Using the sensors, the device will be able to determine roughly where is the problem but won't be able to detect precisly where it is located.
+Acording to what we are doing, the client won't be able to resolve the problem without sending a technician to see in person. Using the sensors, the device will be able to determine roughly where is the problem but won't be able to detect precisly where it is located. The client won't be able to see exactly what is happening and will only have the informations about the state of the device.
 
-## 2.3. What could it do:
+## 2.3. What could the device do:
 
-If we imagine an independant system that could protect himself from turning off in case of a defective component. For that, we would need to have current sensors between each module to detect the exact deficient module and would open a new path in the electical system ( for those we could do without ).
+If we imagine an independant system that could protect himself from turning off in case of a defective component. For that, we would need to have current sensors between each module to detect the exact deficient module and would open a new path in the electical system ( for those we could do without ). We could also add a way for the user to change the place the device is loctaed and adapt the time break to the country laws.
 
-# 3. How will we develop it:
+# 3. How will we develop the device:
 
 From this part, you will know what the project is build with from the parts that are existing and that are used to the things that didn't exist and that was crzated passing throught the applications and IDEs used.
 
@@ -114,7 +120,7 @@ The [*power mosfet module*](https://www.robotics.org.za/XY-MOS) is a device that
 
 The leds ( Light Emitting Diode ) are used to brighten the sign and will be controled using power mosfet module.
 
-#### 3.1.1.5. StLink
+#### 3.1.1.5. Stm32 blue pill
 
 The STM32F103C8T6 ARM Development Board Microcomputer STM32 Core Board is a low cost STM32 microcontroller development board for learners. This board is a low-cost Minimum System Development Board for ARM Microcontroller STM32F103C8T6.
 
@@ -128,21 +134,27 @@ The [*USB to UART module*](https://www.makerfabs.com/usb-uart-convertor-cp2102.h
 
 #### 3.1.1.8. Light sensor:
 
-The light sensor is a device that will allow us to measure the intensity of the light. It will be used to determine if the light is enough or not and to send the information to the card to adjust the intensity of the leds.
+The [light sensor](https://eepower.com/resistor-guide/resistor-types/photo-resistor/#) is a device that will allow us to measure the intensity of the light. It will be used to determine if the light is enough or not and to send the information to the card to adjust the intensity of the leds. The sensor is a photo resistor, so the resistor will change its resistance depending on the intensity of the light. With that, we will be able to change the luminosity depending on the intensity of the sunlight.
 
 ### 3.1.2. Arduino: 
 
-Arduino is an open source hardware ( boards, modules ) and a software ( IDE: Integrated Development Environment ) company. They are well-known to build boards and microcontrollers. Arduino is one of the most used harware in the world ( with raspberry ) and the Arduino IDE is used a lot for injecting code in the Arduino's bords by people.
+Arduino is an open source hardware ( boards, modules ) and a software ( IDE: Integrated Development Environment ) company. They are well-known to build boards and microcontrollers. Arduino is one of the most used harware in the world ( with raspberry ) and the Arduino IDE is used a lot for injecting code in the Arduino's bords by people. We used Arduino to try to manage the serial ports.
 
 ### 3.1.3. STM32CubeProgrammer:
 
-STM32CubeProgrammer is a tool created for programming in the STM products and that replaces STM32 ST-Link Utility. It is used to inject code in the STM32F103C8T6 ARM Development Board Microcomputer STM32 Core Board.
+STM32CubeProgrammer is a tool created for programming in the STM products and that replaces STM32 ST-Link Utility. It is used to inject code in the STM32F103C8T6 ARM Development Board Microcomputer STM32 Core Board. We tried to use it but were able to flash the stm32 blue pill using Visual Studio Code instead.
+
+### 3.1.4. Visual Studio Code:
+
+Visual Studio Code is a code editor that is used to write code. It is used to write the code that will be injected in the STM32F103C8T6 ARM Development Board Microcomputer STM32 Core Board. It is also used to write the code that will be injected in the LoRa-E5 dev board.
 
 ## 3.2. What will we modify:
 
 Here is listed all the software, hardware, and IDE that we will modify or that we modified during the conception.
 
 ## 3.3. What will be created (functions):
+
+Here is listed all the functions that will be created during the conception.
 
 ### 3.3.1. GetCurrentSensorData:
 
@@ -229,5 +241,11 @@ In the timeline, we will put every things that can be considered a millestone in
 <ins>14 october 2022:</ins> After being able to inject code in the board, we were able to start working on the code to inject.
 
 ## 7.4. Week 4:
+
+<ins>17 october 2022:</ins> We managed to make the code work correctly.
+
+<ins>18 october 2022:</ins> We were able to implement code to make use of the sensors.s
+
+<ins>19 october 2022:</ins> The LoRa got flashed.
 
 ## 7.5. Week 5:
