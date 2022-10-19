@@ -104,7 +104,7 @@ The second one is a [*current sensor*](https://www.elecrow.com/acs712-current-se
 A testing environment is a setup of software and hardware on which the testing team is going to execute test cases. The test environment consists of real business and user environment, as well as physical environments, such as server, front end running environment.
 
 Our test environment will set up as below: <br>
-![image](https://cdn.discordapp.com/attachments/450761035016699906/1032267651151573052/diagram.drawio.png)
+![image](https://cdn.discordapp.com/attachments/450761035016699906/1032273115499216896/Diagram.drawio_1.png)
 
 
 ## **VI. Schedules and estimation**
