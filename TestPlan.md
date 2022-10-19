@@ -68,11 +68,15 @@ Test Objective is the overall goal and achievement of the test execution. The ob
 **Suspension Criteria** <br>
 Specify the critical suspension criteria for a test. If the suspension criteria are met during testing, the active test cycle will be suspended until the criteria are resolved.
 
-We have defined the criteria for suspension as:
-- No reaction of the leds;
-- No data received or sent
+If the team members report that there are 10% of test cases failed, suspend testing until the
+development team fixes all the failed cases.
 
-![image](https://cdn.discordapp.com/attachments/450761035016699906/1031835191452373103/Untitled.png)
+**Exit Criteria** <br>
+
+Specifies the criteria that denote a successful completion of a test phase
+- Run rate is mandatory to be 100% unless a clear reason is given.
+- Pass rate is 90%, achieving the pass rate is mandatory.
+
 
 ## **IV. Ressource planning**
 This project is carried out by a team of 5 people: <br>
@@ -115,4 +119,15 @@ Our test environment is composed of:
 | Total                         |                |   5 days and half   |
 
 ## **VII. Determine test deliverables**
-To add once the test is done
+Test deliverables are provided as below
+
+**7.1 Before testing phase**
+- Test plans document.
+  
+**7.2 During the testing**
+- Test Data
+- Error logs and execution logs.
+
+**7.3 After the testing cycles is over**
+- Test Results/reports
+- Defect Report
