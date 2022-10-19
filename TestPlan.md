@@ -57,7 +57,8 @@ When starting a project, one must imagine all possible eventualities in order to
 
 
 #### **III.1.d. Test logistics**
-The tests started the 3 october, realised in a first part by Robin and Clément. 
+The tests started the 3 october, realised in a first part by Robin and Clément. <br>
+In a second time, Laurent and Alexis joined Robin and Quentin to accelerate the speed of the tests. <br>
 
 ### **III.2. Test objectives**
 Test Objective is the overall goal and achievement of the test execution. The objective of the testing is finding as many software defects as possible; ensure that the software under test is bug free before release.
@@ -65,8 +66,8 @@ Test Objective is the overall goal and achievement of the test execution. The ob
 ![image](https://cdn.discordapp.com/attachments/450761035016699906/1031832888460709948/unknown.png)
 
 ### **III.3. Test criteria**
+
 **Suspension Criteria** <br>
-Specify the critical suspension criteria for a test. If the suspension criteria are met during testing, the active test cycle will be suspended until the criteria are resolved.
 
 If the team members report that there are 10% of test cases failed, suspend testing until the
 development team fixes all the failed cases.
