@@ -27,11 +27,9 @@
 	- [3.2. What will be modify:](#32-what-will-we-modify)
 	- [3.3. What will be created (functions):](#33-what-will-be-created-functions)
 		- [3.3.1. GetCurrentSensorData](#331-getcurrentsensordata)
-		- [3.3.2. ChangeLightIntensity](#332-changelightintensity)
-		- [3.3.3. SendDataByLoRa](#333-senddatabylora)
-		- [3.3.4. GetReceivedDataByLoRa](#334-getreceiveddatabylora)
-		- [3.3.5. TurnOnModuleControl](#335-turnonmodulecontrol)
-		- [3.3.6. TurnOffModuleControl](#336-turnoffmodulecontrol)
+		- [3.3.2. Blink](#332-blink)
+		- [3.3.3. Set](#333-set)
+		- [3.3.4. On](#334-on)
 - [4. What for the rollout or if we need rollback:](#4-what-for-the-rollout-or-if-we-need-rollback)
 	- [4.1. Rollout:](#41-rollout)
 	- [4.2. Rollback:](#42-rollback)
@@ -78,10 +76,10 @@ The client will also be able to turn on or turn off the leds from the app so tha
 By making the leds blink, we will be able to control the intensity of the light and so to reduce the luminosity and reduce the energy consuption.<br> The device will automatically turn off at one in the morning and turn on at six in the morning, because of the european laws. However, the client will be able to turn it on or off during that time because according to the laws, the lights can be turned off one hour after you finished working (even if it is late in the night) and turned on one hour before the start of the activity.<br>
 The device is able to change the intensity of the leds using a photosensor. <br>
 The problems the device can detect are: 
- - a misfunctionning in the sensors
- - a power outage
- - a problem with the power supply
- - an overheat of the leds
+ - A misfunctionning in the sensors
+ - A power outage
+ - A problem with the power supply
+ - An overheat of the leds
 
 ## 2.2. What can't the device do:
 
@@ -89,7 +87,7 @@ Acording to what we are doing, the client won't be able to resolve the problem w
 
 ## 2.3. What could the device do:
 
-If we imagine an independant system that could protect himself from turning off in case of a defective component. For that, we would need to have current sensors between each module to detect the exact deficient module and would open a new path in the electical system ( for those we could do without ). We could also add a way for the user to change the place the device is loctaed and adapt the time break to the country laws.
+We could add a way for the user to change the place the device is located and adapt the time break to the country laws.
 
 # 3. How will we develop the device:
 
@@ -101,7 +99,8 @@ Here is listed all the software, hardware, and IDE that are use or were used dur
 
 ### 3.1.1. Electronic components:
 
-Here is decribed all the elctronic components we used during the conception.
+Here is decribed all the elctronic components we used during the conception.<br>
+All the components will have a link to see the datasheet of the component.
 
 #### 3.1.1.1. Power supply:
 
@@ -110,7 +109,8 @@ The power supply we are using is a [*power supply*](https://glpower.eu/en/produc
 #### 3.1.1.2. Current sensors
 
 There is two types of current sensors that we were given. The first one is a [Magnetic current sensor](https://electropeak.com/learn/interfacing-zmct103c-5a-ac-current-transformer-module-with-arduino/) that will read the intensity of the input current using magnetism.<br>
-The second one is a [*current sensor*](https://www.elecrow.com/acs712-current-sensor-30a-p-710.html) that will measure the intensity of the current when it will pass throught the device.
+The second one is a [*current sensor*](https://www.elecrow.com/acs712-current-sensor-30a-p-710.html) that will measure the intensity of the current when it will pass throught the device.<br>
+This sensor could be use multiple times to measure the intensity of the current in different parts of the device.
 
 #### 3.1.1.3. Power mosfet module
 
@@ -160,25 +160,18 @@ Here is listed all the functions that will be created during the conception.
 
 the GetCurrentSensorData function return the current voltage of the current sensor and can be used by any of the two current sensors that we have, depending on the input that is used when calling the function.
 
-### 3.3.2. ChangeLightIntensity:
+### 3.3.2. Blink:
 
-The ChangeLightIntensity function will be used to change the intensity of the light emitted by the leds. It will be used to reduce the energy consuption and to make the leds blink. It will need to use the TurnOnModuleControl and the TurnOffModuleControl functions.
+The Blink function will be used to change the intensity of the light emitted by the leds. It will be used to reduce the energy consuption and to make the leds blink. It will need to use the TurnOnModuleControl and the TurnOffModuleControl functions.
 
-### 3.3.3. SendDataByLoRa:
+### 3.3.3. Set:
 
-The SendDataByLoRa function will be used to send the data that we want to send to the app. It will be used to send the data of the current sensors and the data of the power mosfet module. We will also use it to send the data of the leds.
+The Set function will be used to set the leds on or off. It will need to use the On function.
 
-### 3.3.4. GetReceivedDataByLoRa:
+### 3.3.4. On:
 
-The GetReceivedDataByLoRa function will be used to read the data that we want to get from the app. It will be used to read the requests of the client.
+The On function will be used to turn on the leds. It will need a boolean to turn on or off.
 
-### 3.3.5. TurnOnModuleControl:
-
-The TurnOnModuleControl function will be used to turn on the power mosfet module. It will be used to turn on the leds.
-
-### 3.3.6. TurnOffModuleControl:
-
-The TurnOffModuleControl function will be used to turn off the power mosfet module. It will be used to turn off the leds.
 
 ## 3.4. How will we secure it:
 
@@ -249,3 +242,9 @@ In the timeline, we will put every things that can be considered a millestone in
 <ins>19 october 2022:</ins> The LoRa got flashed.
 
 ## 7.5. Week 5:
+
+<ins>24 october 2022:</ins> We started creating the presentation for the 28 of October.
+
+<ins>25 october 2022:</ins> We finished preparing what we needed.
+
+<ins>28 october 2022:</ins> Presentation of the product.
