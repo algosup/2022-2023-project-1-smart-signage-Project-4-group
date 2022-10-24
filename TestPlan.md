@@ -66,18 +66,14 @@ Test Objective is the overall goal and achievement of the test execution. The ob
 ![image](https://cdn.discordapp.com/attachments/450761035016699906/1031832888460709948/unknown.png)
 
 ### **III.3. Test criteria**
-
 **Suspension Criteria** <br>
-
 If the team members report that there are 10% of test cases failed, suspend testing until the
 development team fixes all the failed cases.
 
 **Exit Criteria** <br>
-
 Specifies the criteria that denote a successful completion of a test phase
 - Run rate is mandatory to be 100% unless a clear reason is given.
 - Pass rate is 90%, achieving the pass rate is mandatory.
-
 
 ## **IV. Ressource planning**
 This project is carried out by a team of 5 people: <br>
@@ -93,7 +89,6 @@ There is the hardware part than we used during the test phase.<br>
 
 * There is two types of current sensors that we were given. The first one is a [*Magnetic current sensor*](https://electropeak.com/learn/interfacing-zmct103c-5a-ac-current-transformer-module-with-arduino/) that will read the intensity of the input current using magnetism.<br>
 The second one is a [*current sensor*](https://www.elecrow.com/acs712-current-sensor-30a-p-710.html) that will measure the intensity of the current when it will pass throught the device.
-
 
 * The [*power mosfet module*](https://www.robotics.org.za/XY-MOS) is a device that will be controlled by the board and will depending on the code that is input in it, will allow current to pass from the power supply to the leds.
 * The leds ( Light Emitting Diode ) are used to brighten the sign and will be controled using power mosfet module.
