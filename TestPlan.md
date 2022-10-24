@@ -52,7 +52,7 @@ In our case, for this project, we will need the:
 When starting a project, one must imagine all possible eventualities in order to reduce the loss of time caused by them. The risks we thought about are:
 | **Risk**                                                                      | **Mitigation**                                        |
 |-------------------------------------------------------------------------------|-------------------------------------------------------|
-| The project schedule is too tight; it’s hard to complete this project on time | Set Test Priority for each of the test activity.      |
+| The project schedule is too tight; it’s hard to complete this project on time | Set Priority for each of the activity.      |
 | A team member is missing                                                      | Distribute his tasks to the rest of the team members. |
 
 
