@@ -49,24 +49,24 @@
 --- 
 # 1. How does it have to work:
 
-This part is meant to explian how each part have to work in an ideal world where we have no problems. It's divided into three parts to allow the searches to be quicker. This device is being created because the client wants to control the device and be able to change his state ( On or Off ) without sending someone so that it will also be a good point for the ecology. The client wants to have a device that will turn off automatically as long as the leds are too hot.
+This part is meant to explain how each part have to work in an ideal world where we have no problems. It's divided into three parts to allow the searches to be quicker. This device is being created because the client wants to control the device and be able to change his state ( On or Off ) without sending someone in order to also be a good point for the ecology. The client wants to have a device that will turn off automatically as long as the leds are too hot.
 
 ## 1.1. Radio part:
 
-The project have to use a *LoRa-E5 dev board* to be connected ( with radio communication ) to a software ([The Things Network](https://thethingsnetwork.org)) Using LoRAWAN protocol. We use the LoRaWAN protocol because we need to send and recieve informations even if the device is not placed in a place where there is an internet connection, so using radio transmition is to make sure that we will be able to send and recieve the informations we want.
+The project have to use a *LoRa-E5 dev board* to be connected ( with radio communication ) to a software ([The Things Network](https://thethingsnetwork.org)) Using LoRAWAN protocol. We use the LoRaWAN protocol because we need to send and receive information even if the device is not placed in a place where there is an internet connection, so using radio transmition is to make sure that we will be able to send and receive the informations we want.
 
 ## 1.2. Coding part:
 
-We need to use [Golang](https://go.dev/) to make a code that will sense when there is or there is not current passing throught the cables and send these informations using the *LoRa-E5 dev board* so that the client can see if it is functionning well or not. To inject the code on the board, we were requested to use [Tiny GO](https://tinygo.org/). We have to write a code that will recieve the datas from all the module, treat the datas ( detect abnomalities ) and send them to the app, and that will also recieve from the app requests from the user to turn on or turn off the device.
+We need to use [Golang](https://go.dev/) to make a code that will sense when there is or there is not current passing throught the cables and send these informations using the *LoRa-E5 dev board* so that the client can see if it is functionning well or not. To inject the code on the board, we were requested to use [Tiny GO](https://tinygo.org/). We have to write a code that will receive the datas from all the module, treat the datas ( detect abnomalities ) and send them to the app, and that will also receive from the app requests from the user to turn on or turn off the device.
 
 ## 1.3. Electronic part:
 
-The leds will be linked with the power supply with a power mosfet module that allow us to control the energy passing by it from the power supply to the leds. We also have two current sensor, the first one will be put between the power supply and the leds to make sure the leds recieve energy, we will be using this current sensor. As for the second one, we will put it on the cable between the outlet and the power supply, in order to determine if there is a problem if it comes from the leds, the power supply or just a power outage. We were also given an USB to UART module to connect the board to the computer to send code throught it.
+The leds will be linked with the power supply with a power mosfet module that allow us to control the energy passing by it from the power supply to the leds. We also have two current sensor, the first one will be put between the power supply and the leds to make sure the leds receive energy, we will be using this current sensor. As for the second one, we will put it on the cable between the outlet and the power supply, in order to determine if there is a problem if it comes from the leds, the power supply or just a power outage. We were also given an USB to UART module to connect the board to the computer to send code throught it.
 <br>Furthermore, all the devices appart from the power supply and the leds will be connected to the board and there datas will be read to detect problems.
 
 # 2. The possibilities:
 
-In this part, we will explain what the device will be able to do in the field we want and what it won't be able to do. This part is used to make sure everyone understand what we have to do and what is out of the scop of the project. We will also detailled some ideas that could be good if we have enough time for them or if others want to improve it later on.
+In this part, we will explain what the device will be able to do in the field we want and what it won't be able to do. This part is used to make sure everyone understand what we have to do and what is out of the scope of the project. We will also detailled some ideas that could be good if we have enough time for them or if others want to improve it later on.
 
 ## 2.1. What can the device do:
 
@@ -91,7 +91,7 @@ We could add a way for the user to change the place the device is located and ad
 
 # 3. How will we develop the device:
 
-From this part, you will know what the project is build with from the parts that are existing and that are used to the things that didn't exist and that was crzated passing throught the applications and IDEs used.
+From this part, you will know how the project is build, from the parts that are existing and that are used, to the things that didn't exist and that was created passing throught the applications and IDEs used.
 
 ## 3.1. What will we use:
 
@@ -99,7 +99,7 @@ Here is listed all the software, hardware, and IDE that are use or were used dur
 
 ### 3.1.1. Electronic components:
 
-Here is decribed all the elctronic components we used during the conception.<br>
+Here is decribed all the electronic components we used during the conception.<br>
 All the components will have a link to see the datasheet of the component.
 
 #### 3.1.1.1. Power supply:
@@ -126,7 +126,7 @@ The STM32F103C8T6 ARM Development Board Microcomputer STM32 Core Board is a low 
 
 #### 3.1.1.6. LoRa-E5 dev board
 
-The [LoRa-E5 dev board](https://www.mouser.fr/new/seeed-studio/seeed-lora-e5-development-kit/) is the microcontroller that we will use as the core of the device, in which we will inject the code and that will be connected to all the modules. It is a LoRaWAN module that will allow us to send and recieve data using radio communication.
+The [LoRa-E5 dev board](https://www.mouser.fr/new/seeed-studio/seeed-lora-e5-development-kit/) is the microcontroller that we will use as the core of the device, in which we will inject the code and that will be connected to all the modules. It is a LoRaWAN module that will allow us to send and receive data using radio communication.
 
 #### 3.1.1.7. USB to UART module:
 
@@ -175,7 +175,7 @@ The On function will be used to turn on the leds. It will need a boolean to turn
 
 ## 3.4. How will we secure it:
 
-There will be no reason to secure the software part of the device because the only informations that are passing by are the state of the leds and the requests sent by the customer.
+There will be no reason to secure the software part of the device because the only information that are passing by are the state of the leds and the requests sent by the customer.
 
 # 4. What for the rollout or if we need rollback:
 
@@ -187,11 +187,11 @@ For the rollout, we think the best way to do it is to start by testing the produ
 
 ## 4.2 Rollback:
 
-In case we need to do a rollback during the developement of the product, we would have to first select the time we need to set the rollback ( if one week ago is selected we will take the files in there states & week ago ), when we selcted the good moment, verify that we didn't created some files we don't want to be deleted ( and save them if that is the case ) and finaly we would use github to take the commits that were in place at the specified date.
+In case we need to do a rollback during the developement of the product, we would have to first select the time we need to set the rollback ( if one week ago is selected we will take the files in there states & week ago ), when we selected the good moment, verify that we didn't created some files we don't want to be deleted ( and save them if that is the case ) and finaly we would use Github to take the commits that were in place at the specified date.
 
 # 5. How will we adapt it to our client:
 
-From what our client want, the device has to scan the modules each thirty minutes to send to the customer the state of the device. Furthermore, if the customer wants to have a update of the device's state, he could click on a button on tha app and the device's clock would be reset to zero and sending an update.
+From what our client want, the device has to scan the modules each thirty minutes to send to the customer the state of the device. Furthermore, if the customer wants to have a update of the device's state, he could click on a button on the app and the device's clock would be reset to zero and sending an update.
 
 # 6. How will we provide support or maintenance:
 
@@ -237,7 +237,7 @@ In the timeline, we will put every things that can be considered a millestone in
 
 <ins>17 october 2022:</ins> We managed to make the code work correctly.
 
-<ins>18 october 2022:</ins> We were able to implement code to make use of the sensors.s
+<ins>18 october 2022:</ins> We were able to implement code to make use of the sensors.
 
 <ins>19 october 2022:</ins> The LoRa got flashed.
 
