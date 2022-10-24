@@ -1,6 +1,7 @@
 <h1 style="text-align: center">Project 1 smart signage project 4 group - Functional Specifications</h1>
 
-<h2 style="text-decoration: underline">Table of contents:</h2>
+<details> 
+<summary style="text-decoration: underline; font-size:150%">Table of contents:</summary>
 
 - [1. Introduction](#1-introduction)
 - [2. Glossary:](#2-glossary)
@@ -16,14 +17,18 @@
   - [7.3 CEO of SignAll:](#73-ceo-of-signall)
   - [7.4 Roles on the application:](#74-roles-on-the-application)
 - [8. The technology:](#8-the-technology)
-- [9. Conclusion:](#9-conclusion)
-  
+- [9. Improvements for V2?](#9-improvements-for-v2)
+  - [9.1 Software:](#91-software)
+  - [9.2 Hardware:](#92-hardware)
+- [10. Conclusion:](#10-conclusion)
+</details>
+
 ---  
 
 ## 1. Introduction 
 
 All stores are equipped with signs so that everyone can know their name. However, the sign sector has not known any innovation for several decades already. <br>
-That's why SignAll wants to change that! Through the innovations they wish to bring, the company wishes to develop and revolutionize this field.
+That's why SignAll wants to change that! Through the innovations they want to bring, the company wishes to develop and revolutionize this field.
 
 They contacted us to created this intelligent sign they want to commercialize. They want their client to be able to control their signages wherever and whenever they want.
 
@@ -31,6 +36,7 @@ They contacted us to created this intelligent sign they want to commercialize. T
 
 - LED: a light-emitting diode (a semiconductor diode which glows when a voltage is applied)
 - dim: make or become less bright or distinct
+- software:
 - hardware: the machines, wiring, and other physical components of a computer or other electronic system
 - GO: programming language
 
@@ -52,7 +58,7 @@ The SignAll team who works on this project is composed of:
 ### 3.2. The engineering team:
 
 The second stakeholders type is the engineering team who will directly work on the development and the conception of the project. This team his made of 5 people : <br>
-* Robin DEBRY as the project manager
+* Robin DEBRY as the project manager 
 * Quentin CLEMENT as the program manager
 * Laurent BOUQUIN as the technical leader
 * Florent HUREAUX as the software engineer
@@ -63,9 +69,7 @@ The second stakeholders type is the engineering team who will directly work on t
 The monitoring of the signage is the main point of the development of this project. <br>
 
 The user will use an application connected to the signage via antennas. 
-He should be able to see if the signage is on, if it is off, the actual brightness of the sign and and the time since the sign is on. <br>
-To fight against breakdowns, the temperature of the LED's will be return, the signage will automatically be shut down at 70°C and the user will be able to know the temperature of the LED's whenever he wants. <br>
-If a led is broken, the leds that are on the same circuit will not work anymore (because the leds are connected in series). If it is the leds placed in the letters of a sign and one of the leds is broken, the letter will be totally extinguished. It is therefore important to all the sign if a led is broken.
+He should be able to see if the signage is on, if it is off, the actual brightness of the sign (in percent depending on the maximum brightness of the led) and the time since the sign is on (in hours and minutes no need to display the seconds and minus (this would force to send information very regularly without real use). <br>
 
 This function will really be an informative one, it has the role of informing the user of the status of the signage in real time.
 
@@ -83,7 +87,7 @@ This will be the interactive features between the signage and the user.
 As we all now, nowadays global warming is in everyone's mind and a large number of constraints are imposed on companies to avoid the various pollutions. <br>
 In the case of signages it is light pollution and electricity consumption that are targeted by the different laws.
 
-To help SignAll in this field, we will add an intelligent feature to replace the human action. The signage wasn't turned off during the night, it will be automatically turned off at 1am and on again at 6am (french law of the 10/07/2022). <br>
+To help SignAll in this field, we will add an intelligent feature to replace the human action. If the signage wasn't turned off during the night, it will be automatically turned off at 1am and on again at 6am (french law of the 10/07/2022). <br>
 If the user needs to turn it on during this period, he can do so anyway.
 Depending on the 
 
@@ -113,7 +117,7 @@ He wants a technology that will possesse these features: monitoring of the signa
 
 ### 7.4 Roles on the application:
 
-In the future, different roles will be created on the application to help everyone (depending on what they have to do on the sign) to help manage the signs in the best way. 
+In the future, different roles will be created on the application to help everyone (depending on what they have to do on the sign) to help manage the signages in the best way. It will be the person in charge of each signage who will choose to whom the different roles will be attributed.
 
 ## 8. The technology:
 
@@ -123,6 +127,23 @@ The STM32 will be the element that will execute the orders of the user.
 There will be other elements like ST-Link, to connect the LoRa to the STM32 and different sensors to collect information on the signage and warn the user of the status of the signage and anticipate possible failures. 
 We will use GO to program the STM32.
 
-## 9. Conclusion:
+## 9. Improvements for V2?
 
-This project will help SignAll and all its client to improve their way of working. It will helps them saving time and limiting the energy losses to protect the planet and their wallets.
+### 9.1 Software:
+
+The following step of this project is to create the application for the users to let them control the signages. It will be done in the following months.
+
+### 9.2 Hardware:
+
+There is always room for improvement. This is why everything that could not be completed during these 6 weeks compared to what was initially planned in the specifications will obviously be added and/or improved in V2.
+The whole part of the fight against breakdowns will be added in the V2. This part contains:
+- fight against overheating: the temperature of the LED's will be returned, the signage will automatically be shut down at 70°C and the user will be able to know the temperature of the LED's whenever he wants. <br>
+- LED failure: if a led is broken, the LED's that are on the same circuit will not work anymore (because the LED's are connected in series). If it is the LED's placed in the letters of a sign and one of them is broken, the letter will be totally extinguished. It is therefore important that the whole panel goes out if a led is broken to keep the rendering as aesthetic as possible.
+
+## 10. Conclusion:
+
+In spite of the specifications transmitted by signall, a lot of freedom was voluntarily left to us so that we could find ideas which they had not necessarily thought of. <br>
+
+Thanks to the communication between the stakeholders we were able to imagine and develop a rich project in the image of ALGOSUP and SignAll. <br>
+
+We are convinced that close collaboration between the 2 teams will help SignAll and all its client to improve their way of working. We hope it will helps them saving time and limiting the energy losses to protect the planet and their wallets.
