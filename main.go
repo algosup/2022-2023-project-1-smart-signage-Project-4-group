@@ -36,7 +36,7 @@ func pres(blink bool) {
 
 }
 func Light(isReduce bool, isOn bool) {
-	rate := time.Second
+	rate := time.Second / 5000
 	leds := machine.PC13
 	leds.Configure(machine.PinConfig{Mode: machine.PinOutput})
 	if isOn {
