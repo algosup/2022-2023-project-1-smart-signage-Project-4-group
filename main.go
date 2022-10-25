@@ -16,39 +16,17 @@ func main() {
 		machine.UART1.Write([]byte("AT+MSG='Joined'\r\n"))
 		println(join)
 	}
-
-	for i := 0; i < 100; i++ {
-		zqsedrftgy(false)
-	}
-	for i := 0; i < 100; i++ {
-		zqsedrftgy(true)
-	}
-
-}
-func zqsedrftgy(CustomerOn bool) {
-	if CustomerOn {
-		//_, join := machine.UART1.Write([]byte("AT+JOIN\r\n"))
-
-		//println(join)
-		Light(true, true)
-
-		//_, msg := machine.UART1.Write([]byte("AT+MSG='allumé'\r\n"))
-		//_, read := machine.UART1.Read(msg)
-		//println(msg)
-		//println(read)
-	} else {
-		Light(false, false)
-
-	_, msg := machine.UART1.Write([]byte("AT+MSG='allumé'\r\n"))
 	for {
-		for i := 0; i < 100; i++ {
-			pres(true)
-		}
-		for i := 0; i < 100; i++ {
+		for i := 0; i < 5000; i++ {
 			pres(false)
 		}
+		for i := 0; i < 5000; i++ {
+			pres(true)
+		}
 	}
+
 }
+
 func pres(blink bool) {
 	if blink {
 		Light(true, true)
