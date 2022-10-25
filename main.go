@@ -39,10 +39,24 @@ func zqsedrftgy(CustomerOn bool) {
 	} else {
 		Light(false, false)
 
+	_, msg := machine.UART1.Write([]byte("AT+MSG='allumé'\r\n"))
+	for {
+		for i := 0; i < 100; i++ {
+			pres(true)
+		}
+		for i := 0; i < 100; i++ {
+			pres(false)
+		}
+	}
+}
+func pres(blink bool) {
+	if blink {
+		Light(true, true)
+	} else {
+		Light(false, true)
 	}
 
 }
-
 func Light(isReduce bool, isOn bool) {
 	rate := time.Second
 	leds := machine.PC13
