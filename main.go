@@ -41,12 +41,11 @@ func Light(isReduce bool, isOn bool) {
 	leds.Configure(machine.PinConfig{Mode: machine.PinOutput})
 	if isOn {
 		if isReduce {
-			for {
-				leds.High()
-				time.Sleep(rate)
-				leds.Low()
-				time.Sleep(rate)
-			}
+			leds.High()
+			time.Sleep(rate)
+			leds.Low()
+			time.Sleep(rate)
+
 		} else {
 			leds.High()
 
