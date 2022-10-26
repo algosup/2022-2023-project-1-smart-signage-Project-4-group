@@ -6,24 +6,42 @@ import (
 )
 
 func main() {
-	machine.UART1.Configure(machine.UARTConfig{BaudRate: 9600, TX: machine.PA2, RX: machine.PA3})
-	_, join := machine.UART1.Write([]byte("AT+JOIN\r\n"))
-	rate2 := time.Second * 10
-	time.Sleep(rate2)
-	//_, read := machine.UART1.Read(join)
-	if join != nil {
-		time.Sleep(rate2)
-		machine.UART1.Write([]byte("AT+MSG='Joined'\r\n"))
-		println(join)
+	uart := machine.UART2
+	uart.Configure(machine.UARTConfig{BaudRate: 9600, TX: machine.A2, RX: machine.A3})
+	_, err := uart.Write([]byte("AT+JOIN\r\n"))
+
+	if err != nil {
+		println("Error: " + err.Error())
+
+		// return ""
 	}
+	msg1 := ""
 	for {
+		if uart.Buffered() > 0 {
+			rb, err := uart.ReadByte()
+			if err != nil {
+				println("Error: " + err.Error())
+				continue
+				// return ""
+			}
+			msg1 += string(rb)
+			if msg1[len(msg1)-1] == '\n' {
+				break
+			}
+			uart.Write([]byte("AT+MSG\"Hello\"\r\n"))
+		}
+
+	}
+
+	minLight()
+	/*for {
 		for i := 0; i < 5000; i++ {
 			pres(false)
 		}
 		for i := 0; i < 5000; i++ {
 			pres(true)
 		}
-	}
+	}*/
 
 }
 
@@ -35,9 +53,30 @@ func pres(blink bool) {
 	}
 
 }
+
+func Off() {
+	leds := machine.PA12
+	leds.Configure(machine.PinConfig{Mode: machine.PinOutput})
+	leds.Low()
+}
+
+func On() {
+	leds := machine.PA12
+	leds.Configure(machine.PinConfig{Mode: machine.PinOutput})
+	leds.High()
+}
+
+func minLight() {
+	for {
+		On()
+		time.Sleep(time.Second / 1000)
+		Off()
+		time.Sleep(time.Second / 100)
+	}
+}
 func Light(isReduce bool, isOn bool) {
 	rate := time.Second / 5000
-	leds := machine.PC13
+	leds := machine.PA12
 	leds.Configure(machine.PinConfig{Mode: machine.PinOutput})
 	if isOn {
 		if isReduce {
