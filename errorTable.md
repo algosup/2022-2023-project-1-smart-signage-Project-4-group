@@ -8,4 +8,3 @@
 |  10/11/2022 | error : no debug probe connected                                 |  Yes    ✅   | change wires|  10/12/2022      |
 |  10/19/2022 | TimeRules Not working (wrong conditions)                         |  Yes    ✅  |change function's conditions | 10/20/2022 |
 |   10/24/2022   |   Breadboard connection issues         |   Yes    ✅   |remove the bread board| 10/24/2022  |
-|             |                                                                  |      No     ❌         |             |                  |
