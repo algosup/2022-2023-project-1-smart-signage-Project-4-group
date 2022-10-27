@@ -28,79 +28,47 @@ func main() {
 			if msg1[len(msg1)-1] == '\n' {
 				break
 			}
-			uart.Write([]byte("AT+MSG\"Hello\"\r\n"))
-		}
 
+		}
+		uart.Write([]byte("AT+MSG=\"Joined\"\r\n"))
 	}
 
-	minLight()
-	/*for {
-		for i := 0; i < 5000; i++ {
-			pres(false)
-		}
-		for i := 0; i < 5000; i++ {
-			pres(true)
-		}
-	}*/
-
-}
-
-func pres(blink bool) {
-	if blink {
-		Light(true, true)
-	} else {
-		Light(false, true)
+	for {
+		On()
+		uart.Write([]byte("AT+MSG=\"Allumé\"\r\n"))
+		time.Sleep(time.Second * 10)
+		minLight(365 * time.Second)
+		uart.Write([]byte("AT+MSG=\"baisse\"\r\n"))
+		Off()
+		uart.Write([]byte("AT+MSG=\"eteinte\"\r\n"))
+		time.Sleep(time.Second * 105)
 	}
 
 }
 
 func Off() {
-	leds := machine.PA12
+	leds := machine.PC13
 	leds.Configure(machine.PinConfig{Mode: machine.PinOutput})
 	leds.Low()
 }
 
 func On() {
-	leds := machine.PA12
+	leds := machine.PC13
 	leds.Configure(machine.PinConfig{Mode: machine.PinOutput})
 	leds.High()
 }
 
-func minLight() {
+func minLight(dur time.Duration) {
+	start := time.Now()
 	for {
+		if time.Now().Sub(start) > dur {
+			break
+		}
+
 		On()
 		time.Sleep(time.Second / 1000)
 		Off()
 		time.Sleep(time.Second / 100)
-	}
-}
-func Light(isReduce bool, isOn bool) {
-	rate := time.Second / 5000
-	leds := machine.PA12
-	leds.Configure(machine.PinConfig{Mode: machine.PinOutput})
-	if isOn {
-		if isReduce {
-			leds.High()
-			time.Sleep(rate)
-			leds.Low()
-			time.Sleep(rate)
-
-		} else {
-			leds.High()
-
-		}
-	} else {
-		leds.Low()
 
 	}
 }
-
-func Sleep(duration int) {
-	time.Sleep(time.Second * time.Duration(duration))
-}
-
-// func printBuf(b []byte) {
-// 	for _, val := range b {
-// 		fmt.Printf("%x ", val)
-// 	}
-// }
